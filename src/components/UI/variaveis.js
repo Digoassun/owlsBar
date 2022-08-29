@@ -1,0 +1,10 @@
+export const laranja = "#994B22"
+export const cinza = "#212227"
+export const gelo = "#D9D9D9"
+export const preto = "#000"
+export const branco = "#FFF"
+
+export const sancreek = "font-family: 'Sancreek', cursive;"
+export const jost = "font-family: 'Jost', sans-serif;"
+export const openSans = "font-family: 'Open Sans', sans-serif;"
+export const satisfy = "font-family: 'Satisfy', cursive;"
