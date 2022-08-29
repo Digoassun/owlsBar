@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { BtnLaranja } from "../UI";
 import { NavBarStyled } from "./style";
 
-const NavBar = () => {
+const NavBar = ({column,gap,none}) => {
   return (
-    <NavBarStyled>
+    <NavBarStyled column={column} gap={gap} none={none}>
       <li>
         <Link to="/">Home</Link>
       </li>

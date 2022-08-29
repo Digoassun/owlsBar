@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import {cinza} from '../UI/variaveis'
+import {
+    cinza, branco
+} from '../UI/variaveis'
 
-export const HeaderStyled = styled.header`
+export const HeaderStyled = styled.header `
     width: 100%;
     height: 130px;
     display: flex;
@@ -13,5 +15,16 @@ export const HeaderStyled = styled.header`
     img{
         width: 200px;
         height: 100px;
+    }
+
+    .hamburguer{
+        display: none;
+        color:${branco};
+    }
+
+    @media(max-width:1000px){
+    .hamburguer{
+        display: flex;
+    }
     }
 `
