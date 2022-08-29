@@ -1,8 +1,8 @@
 export const laranja = "#994B22"
 export const cinza = "#212227"
 export const gelo = "#D9D9D9"
-export const preto = "#000"
-export const branco = "#FFF"
+export const preto = "#1f1f1f"
+export const branco = "#f0f0f0"
 
 export const sancreek = "font-family: 'Sancreek', cursive;"
 export const jost = "font-family: 'Jost', sans-serif;"
