@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{useState} from "react";
+import { HeaderStyled } from "./style";
+import logo from "../../assets/logo-header.png";
+import { Link } from "react-router-dom";
+import NavBar from "../NavBar";
 
 const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
+  const [menu, setMenu] = useState(true)
 
-export default Header
+  return (
+    <HeaderStyled>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
+      <NavBar/>
+    </HeaderStyled>
+  );
+};
+
+export default Header;
