@@ -58,6 +58,11 @@ export const ContainerCard = styled.section `
     display: flex;
     flex-direction: column;
     margin:100px 0;
+
+    p{
+        font-size: 50px;
+        color: white;
+    }
 `
 
 export const CardBox = styled.div `

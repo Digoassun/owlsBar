@@ -12,13 +12,25 @@ import { api } from "../../services/api";
 
 const Cardapio = () => {
   const [infos, setInfos] = useState([]);
+  const [value, setValue] = useState("");
 
+  const results = infos.filter((item) => {
+    if (value === "") {
+      return item;
+    } else if (item.produto.toLowerCase().includes(value.toLowerCase())) {
+      return item;
+    }
+  });
 
-  const handleLoadReq = () => {
+    const handleLoadReq = () => {
     api.get("menu").then((response) => {
       setInfos(response.data.dados);
-      console.log(response.data.dados);
     });
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
   };
 
   useEffect(() => {
@@ -31,10 +43,13 @@ const Cardapio = () => {
         <Title>Cardápio</Title>
       </ContainerBanner>
       <ContainerCard>
-        <FormSearch/>
+        <FormSearch
+          value={value}
+          handleChange={handleChange}
+        />
         <CardBox>
           {infos.length > 0 &&
-            infos.map((item, index) => {
+            results.map((item, index) => {
               return (
                 <Card
                   key={index}
@@ -44,7 +59,8 @@ const Cardapio = () => {
                   preco={item.valor}
                 />
               );
-            })}
+            })
+            }
         </CardBox>
       </ContainerCard>
     </ContainerPage>

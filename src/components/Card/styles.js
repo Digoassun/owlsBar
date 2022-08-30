@@ -47,6 +47,7 @@ export const CardStyle = styled.article `
             width: 25%;
             display: flex;
             justify-content: space-between;
+            cursor: pointer;
         }
 
         h4{

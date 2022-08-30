@@ -1,12 +1,15 @@
 import React from "react";
 import { BtnSearch, FormStyled } from "./styles";
+import { Link } from "react-router-dom";
 
-const FormSearch = ({handleReq}) => {
+
+const FormSearch = ({value, handleChange}) => {
   return (
     <FormStyled>
-      <input type="text" placeholder="O que você está procurando?" />
-      <BtnSearch onClick={handleReq}>Pesquisar</BtnSearch>
+      <input onChange={handleChange} value={value} type="text" placeholder="O que você está procurando?" />
+      <Link to="/adicionar">
       <BtnSearch >Adicionar</BtnSearch>
+      </Link>
     </FormStyled>
   );
 };
