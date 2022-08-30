@@ -7,7 +7,6 @@ import { laranja } from "../UI/variaveis";
 export const FormStyled = styled.form `
     display: flex;
     justify-content: center;
-    margin:100px 0; 
     gap:20px;
     width:100%;
 

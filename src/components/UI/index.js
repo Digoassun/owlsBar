@@ -29,6 +29,8 @@ export const Title = styled.h1 `
 export const ContainerPage = styled.main `
     display: flex;
     flex-direction: column;
+    background-color:${preto};
+
 `
 
 export const ContainerBanner = styled.section `
@@ -41,10 +43,8 @@ export const ContainerBanner = styled.section `
 `
 
 export const ContainerCard = styled.section `
-    background-color:${preto};
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    margin:100px 0;
 `

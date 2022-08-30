@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import Card from "../../components/Card";
 import FormSearch from "../../components/FormSimple";
 import {
   ContainerBanner,
@@ -8,6 +9,12 @@ import {
 } from "../../components/UI";
 
 const Cardapio = () => {
+  const [infos, setInfos] = useState("")
+
+  const handleReq = ()=>{
+
+  }
+  
   return (
     <ContainerPage>
       <ContainerBanner>
@@ -15,6 +22,7 @@ const Cardapio = () => {
       </ContainerBanner>
       <ContainerCard>
         <FormSearch/>
+        <Card/>
       </ContainerCard>
     </ContainerPage>
   );

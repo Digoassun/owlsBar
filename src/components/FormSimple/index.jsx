@@ -6,6 +6,7 @@ const FormSearch = () => {
     <FormStyled>
       <input type="text" placeholder="O que você está procurando?" />
       <BtnSearch>Pesquisar</BtnSearch>
+      <BtnSearch>Adicionar</BtnSearch>
     </FormStyled>
   );
 };
