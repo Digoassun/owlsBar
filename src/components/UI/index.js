@@ -48,3 +48,14 @@ export const ContainerCard = styled.section `
     flex-direction: column;
     margin:100px 0;
 `
+
+export const CardBox = styled.div`
+    min-height: auto;
+    margin: 100px 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+`

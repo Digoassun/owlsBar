@@ -1,12 +1,12 @@
 import React from "react";
 import { BtnSearch, FormStyled } from "./styles";
 
-const FormSearch = () => {
+const FormSearch = ({handleReq}) => {
   return (
     <FormStyled>
       <input type="text" placeholder="O que você está procurando?" />
-      <BtnSearch>Pesquisar</BtnSearch>
-      <BtnSearch>Adicionar</BtnSearch>
+      <BtnSearch onClick={handleReq}>Pesquisar</BtnSearch>
+      <BtnSearch >Adicionar</BtnSearch>
     </FormStyled>
   );
 };

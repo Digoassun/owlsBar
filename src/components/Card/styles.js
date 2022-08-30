@@ -4,17 +4,6 @@ import {
     gelo
 } from "../UI/variaveis";
 
-
-export const CardBox = styled.div`
-    min-height: auto;
-    margin: 100px 200px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-`
-
 export const CardStyle = styled.article `    
     height: 360px;
     width: 280px;
