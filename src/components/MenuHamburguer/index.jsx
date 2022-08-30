@@ -1,12 +1,12 @@
 import { Container } from "./styles";
 import { IoClose } from "react-icons/io5";
 import NavBar from "../NavBar";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 
 export function MenuHamburguer({ menu, setMenu }) {
-    // useEffect(() => {
-    //     document.body.style.overflowY = menu? 'hidden' : "auto"
-    // }, [menu])
+    useEffect(() => {
+        document.body.style.overflowY = menu? 'hidden' : "auto"
+    }, [menu])
     
   return (
     <Container isVisible={menu}>

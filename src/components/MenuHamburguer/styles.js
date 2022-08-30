@@ -32,7 +32,7 @@ export const Container = styled.div`
         transition: .7s;
     }
     ${({isVisible})=> isVisible && css`
-    opacity: 0.8;
+    opacity: 0.95;
     pointer-events: auto;
     transform: translateY(0);
 

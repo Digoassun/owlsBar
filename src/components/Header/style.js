@@ -27,4 +27,11 @@ export const HeaderStyled = styled.header `
         display: flex;
     }
     }
+
+    @media(max-width:500px){
+    img{
+        width: 140px;
+        height: 70px;
+    }
+    }
 `

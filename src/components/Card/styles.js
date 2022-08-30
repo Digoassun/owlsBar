@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-    branco,
     gelo
 } from "../UI/variaveis";
 
@@ -46,8 +45,8 @@ export const CardStyle = styled.article `
 
         .icons{
             width: 25%;
-          display: flex;
-          justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
         }
 
         h4{

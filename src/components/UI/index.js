@@ -6,7 +6,7 @@ import {
     preto,
     jost
 } from "./variaveis";
-import banner from '../../assets/banner-cardapio.jpg'
+import banner from '../../assets/banner-cardapio.png'
 
 export const BtnLaranja = styled.button `
     position: relative;
@@ -25,6 +25,9 @@ export const Title = styled.h1 `
     font-size: 100px;
     font-weight:400;
     color: ${branco};
+    @media(max-width:500px){
+        font-size: 80px;
+    }
 `
 export const ContainerPage = styled.main `
     display: flex;
@@ -40,6 +43,14 @@ export const ContainerBanner = styled.section `
     height: 300px;
     background: url(${banner});
     background-position:center;
+
+    @media(max-width:700px){
+        padding: 0 50px;
+    }
+
+    @media(max-width:500px){
+        padding: 0 10px;
+    }
 `
 
 export const ContainerCard = styled.section `
@@ -49,7 +60,7 @@ export const ContainerCard = styled.section `
     margin:100px 0;
 `
 
-export const CardBox = styled.div`
+export const CardBox = styled.div `
     min-height: auto;
     margin: 100px 200px;
     display: flex;
@@ -58,4 +69,6 @@ export const CardBox = styled.div`
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
+
+    
 `
