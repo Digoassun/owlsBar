@@ -10,7 +10,7 @@ const NavBar = ({column,gap,none}) => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/">Cardápio</Link>
+        <Link to="/cardapio">Cardápio</Link>
       </li>
       <li>
         <Link to="/">Cadastro</Link>
