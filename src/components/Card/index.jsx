@@ -8,17 +8,15 @@ const Card = ({ img, produto, desc, preco }) => {
     <CardStyle>
       <figure>
         <img src={img} alt="produto" />
-        {/* <i>
-        <GoTrashcan size={30}/>
-        </i> */}
       </figure>
       <div className="infos">
         <h3>{produto.toUpperCase()}</h3>
         <p>{desc}</p>
         <div className="editPrice">
-          <i>
-            <BsPencilSquare size={30} />
-          </i>
+          <div className="icons">
+            <BsPencilSquare size={25} />
+            <GoTrashcan className="trash" size={25} />
+          </div>
           <h4>
             a partir de:<span>R${preco}</span>
           </h4>
