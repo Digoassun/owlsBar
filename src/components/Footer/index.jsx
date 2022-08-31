@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import { FooterStyled } from "./styles";
+import logo from "../../assets/logo-header.png";
+import { DivInfos } from "../common/Infos/styles";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+  <FooterStyled>
+    <img src={logo} alt="logo footer" />
+    <DivInfos>Sobre</DivInfos>
+  </FooterStyled>)
+};
 
-export default Footer
+export default Footer;
