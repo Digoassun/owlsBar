@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
     gelo
-} from "../UI/variaveis";
+} from "../../styles/variaveis";
 
 export const CardStyle = styled.article `    
     height: 360px;

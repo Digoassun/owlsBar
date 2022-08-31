@@ -7,7 +7,7 @@ import {
   ContainerCard,
   ContainerPage,
   Title,
-} from "../../components/UI";
+} from "../../styles/globalStyles";
 import { api } from "../../services/api";
 
 const Cardapio = () => {

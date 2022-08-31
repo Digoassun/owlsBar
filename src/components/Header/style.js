@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
     cinza, branco
-} from '../UI/variaveis'
+} from '../../styles/variaveis'
 
 export const HeaderStyled = styled.header `
     width: 100%;

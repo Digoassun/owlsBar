@@ -1,5 +1,5 @@
 import styled,{css} from "styled-components";
-import { cinza,branco } from "../UI/variaveis";
+import { cinza,branco } from "../../styles/variaveis";
 
 export const Container = styled.div`
     position: absolute;

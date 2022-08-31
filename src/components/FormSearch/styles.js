@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {
     BtnLaranja
-} from "../UI";
-import { laranja } from "../UI/variaveis";
+} from "../../styles/globalStyles";
+import { laranja } from "../../styles/variaveis";
 
 export const FormStyled = styled.form `
     display: flex;
