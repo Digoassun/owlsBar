@@ -20,7 +20,7 @@ const NavBar = ({column,gap,none}) => {
       </li>
       <li>
         <BtnLaranja>
-          <Link to="/">Administrador</Link>
+          <Link to="/login">Administrador</Link>
         </BtnLaranja>
       </li>
     </NavBarStyled>
