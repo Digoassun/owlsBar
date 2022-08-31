@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import {
-    branco,
     gelo
-} from "../UI/variaveis";
+} from "../../styles/variaveis";
 
 export const CardStyle = styled.article `    
     height: 360px;
@@ -11,24 +10,17 @@ export const CardStyle = styled.article `
     background: ${gelo};
     figure{
         width: 280px;
-        height: 160px;
-        border-radius: 10px 10px 0 0 ;
-
+        height: 200px;
+        border-radius: 10px 10px 0 0 ;        
         img{
             border-radius: 10px 10px 0 0 ;
             width: 280px;
-            height: 160px;
+            height: 200px;
         }
-        /* i{
-            height: 150px;
-            width: 150px;
-            background-color: ${branco};
-            border-radius: 44%;
-        } */
     }
 
     .infos{
-        height: 200px;
+        height: 160px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -50,6 +42,13 @@ export const CardStyle = styled.article `
     .editPrice{
         display: flex;
         justify-content: space-between;
+
+        .icons{
+            width: 25%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
 
         h4{
             font-size: 14px;

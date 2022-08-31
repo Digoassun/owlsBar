@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BtnLaranja } from "../UI";
+import { BtnLaranja } from "../../styles/globalStyles";
 import { NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none}) => {

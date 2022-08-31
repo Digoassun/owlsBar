@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
     jost,
     branco
-} from "../UI/variaveis";
+} from "../../styles/variaveis";
 
 export const NavBarStyled = styled.ul `
     list-style-type: none;

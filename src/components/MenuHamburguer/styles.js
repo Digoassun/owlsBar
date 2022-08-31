@@ -1,5 +1,5 @@
 import styled,{css} from "styled-components";
-import { cinza,branco } from "../UI/variaveis";
+import { cinza,branco } from "../../styles/variaveis";
 
 export const Container = styled.div`
     position: absolute;
@@ -32,7 +32,7 @@ export const Container = styled.div`
         transition: .7s;
     }
     ${({isVisible})=> isVisible && css`
-    opacity: 0.8;
+    opacity: 0.95;
     pointer-events: auto;
     transform: translateY(0);
 

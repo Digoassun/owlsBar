@@ -1,23 +1,27 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react'
+import { BrowserRouter, Routes as Switcher, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Add from "./pages/Add/Add";
 import Cardapio from "./pages/Cardarpio/Cardapio";
+import Edit from "./pages/Edit/Edit";
 import Home from "./pages/Home/Home";
 import { GlobalStyle } from "./styles/globalStyles";
 
-function App() {
+const Routes = () => {
   return (
     <>
       <GlobalStyle/>
       <BrowserRouter>
         <Header/>
-        <Routes>
+        <Switcher>
           <Route path="/" element={<Home/>}/>
           <Route path="/cardapio" element={<Cardapio/>}/>
-        </Routes>
+          <Route path="/editar" element={<Edit/>}/>
+          <Route path="/adicionar" element={<Add/>}/>
+        </Switcher>
       </BrowserRouter>
     </>
-  );
+  )
 }
 
-export default App;
+export default Routes
