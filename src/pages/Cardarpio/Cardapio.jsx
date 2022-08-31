@@ -9,10 +9,13 @@ import {
   Title,
 } from "../../styles/globalStyles";
 import { api } from "../../services/api";
+import ModalDelete from "../../components/ModalDelete";
 
 const Cardapio = () => {
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState("");
 
   const results = infos.filter((item) => {
     if (value === "") {
@@ -22,7 +25,7 @@ const Cardapio = () => {
     }
   });
 
-    const handleLoadReq = () => {
+  const handleLoadReq = () => {
     api.get("menu").then((response) => {
       setInfos(response.data.dados);
     });
@@ -38,32 +41,38 @@ const Cardapio = () => {
   }, []);
 
   return (
-    <ContainerPage>
-      <ContainerBanner>
-        <Title>Cardápio</Title>
-      </ContainerBanner>
-      <ContainerCard>
-        <FormSearch
-          value={value}
-          handleChange={handleChange}
-        />
-        <CardBox>
-          {infos.length > 0 &&
-            results.map((item, index) => {
-              return (
-                <Card
-                  key={index}
-                  img={item.img}
-                  produto={item.produto}
-                  desc={item.descricao}
-                  preco={item.valor}
-                />
-              );
-            })
-            }
-        </CardBox>
-      </ContainerCard>
-    </ContainerPage>
+    <>
+      <ModalDelete
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        selectedProduct={selectedProduct}
+        handleLoad={handleLoadReq}
+      />
+      <ContainerPage>
+        <ContainerBanner>
+          <Title>Cardápio</Title>
+        </ContainerBanner>
+        <ContainerCard>
+          <FormSearch value={value} handleChange={handleChange} />
+          <CardBox>
+            {infos.length > 0 &&
+              results.map((item, index) => {
+                return (
+                  <Card
+                    key={index}
+                    img={item.img}
+                    produto={item.produto}
+                    desc={item.descricao}
+                    preco={item.valor}
+                    setIsOpen={setIsOpen}
+                    setSelectedProduct={setSelectedProduct}
+                  />
+                );
+              })}
+          </CardBox>
+        </ContainerCard>
+      </ContainerPage>
+    </>
   );
 };
 
