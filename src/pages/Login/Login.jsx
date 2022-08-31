@@ -2,7 +2,8 @@ import React from 'react'
 import { TextField } from '@mui/material'
 import {MenuItem }from '@mui/material';
 import { useState } from 'react';
-import { BtnLaranja, TitleOrange, ContainerPageLogin, ContainerForm } from "../../styles/globalStyles";
+import { BtnLaranja, ContainerPageLogin, ContainerForm } from "../../styles/globalStyles";
+import { TitleOrange } from './styles'
 
 
 const Login = () => {
@@ -13,8 +14,8 @@ const Login = () => {
             label: 'Gerente',
         },
         {
-            value: 'garcon',
-            label: 'Garçon',
+            value: 'garcom',
+            label: 'Garçom',
         },
     ];
 

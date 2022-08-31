@@ -47,15 +47,7 @@ export const Title = styled.h1`
         font-size: 80px;
     }
 `
-export const TitleOrange = styled.h1`
-    ${sancreek}
-    font-size: 40px;
-    font-weight:400;
-    color: ${laranja};
-    @media(max-width:500px){
-        font-size: 30px;
-    }
-`
+
 
 export const ContainerPage = styled.main`
     display: flex;
@@ -68,7 +60,7 @@ export const ContainerPageLogin = styled.main`
     flex-direction: row;
     align-itens: center;
     justify-content:center;
-    height: 700px;
+    height: 650px;
     background-color:${preto};
     background-image: url(${backLogin});
     background-position: center;
@@ -80,10 +72,14 @@ export const ContainerForm = styled.form`
     display: flex;
     flex-direction: column;
     align-itens: center;
-    justify-content:center;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+    margin-top: 110px;
+    gap: 20px;
     background-color:${gelo};
-    height: 483px;
-    width: 446px;
+    height: 400px;
+    width: 400px;
     border-radius: 3%
 }
 `
