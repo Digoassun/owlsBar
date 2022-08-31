@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-    gelo
+    gelo,cinza
 } from "../../styles/variaveis";
 
 export const CardStyle = styled.article `    
@@ -13,7 +13,7 @@ export const CardStyle = styled.article `
         height: 200px;
         border-radius: 10px 10px 0 0 ;        
         img{
-            border-radius: 10px 10px 0 0 ;
+            border-radius: 8px 8px 0 0 ;
             width: 280px;
             height: 200px;
         }
@@ -53,7 +53,7 @@ export const CardStyle = styled.article `
         h4{
             font-size: 14px;
             font-weight: 400;
-            color: grey;
+            color: ${cinza};
             display: flex;
             align-items: center;
             gap: 10px;
