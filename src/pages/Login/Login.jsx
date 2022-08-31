@@ -6,6 +6,7 @@ import { BtnLaranja, ContainerPageLogin, ContainerForm } from "../../styles/glob
 import { TitleOrange } from './styles'
 
 
+
 const Login = () => {
 
     const usuarios = [
@@ -16,6 +17,7 @@ const Login = () => {
         {
             value: 'garcom',
             label: 'Garçom',
+
         },
     ];
 

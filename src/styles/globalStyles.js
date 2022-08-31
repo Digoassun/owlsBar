@@ -48,7 +48,6 @@ export const Title = styled.h1`
     }
 `
 
-
 export const ContainerPage = styled.main`
     display: flex;
     flex-direction: column;
