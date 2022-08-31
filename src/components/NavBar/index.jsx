@@ -13,14 +13,11 @@ const NavBar = ({column,gap,none}) => {
         <Link to="/cardapio">Cardápio</Link>
       </li>
       <li>
-        <Link to="/">Cadastro</Link>
-      </li>
-      <li>
         <Link to="/">Contato</Link>
       </li>
       <li>
         <BtnLaranja>
-          <Link to="/">Administrador</Link>
+          <Link to="/">Login</Link>
         </BtnLaranja>
       </li>
     </NavBarStyled>

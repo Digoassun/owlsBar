@@ -27,7 +27,7 @@ body,html{
 export const BtnLaranja = styled.button `
     position: relative;
     background-color: ${laranja};
-    padding: 10px 12px;
+    padding: 10px 50px;
     cursor: pointer;
     box-shadow:(0px 4px 4px rgba(5, 5, 5, 0.5));
     border-radius: 10px;
