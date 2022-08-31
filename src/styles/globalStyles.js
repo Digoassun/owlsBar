@@ -1,4 +1,4 @@
-import styled,{
+import styled, {
     createGlobalStyle
 } from "styled-components";
 import {
@@ -6,11 +6,13 @@ import {
     sancreek,
     branco,
     preto,
+    gelo,
     jost
 } from "./variaveis";
 import banner from '../assets/banner-cardapio.png'
+import backLogin from '../assets/fundo-login.png'
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
   *{
     box-sizing: border-box;
     margin: 0;
@@ -24,7 +26,7 @@ body,html{
     width:100%;
 }
 `
-export const BtnLaranja = styled.button `
+export const BtnLaranja = styled.button`
     position: relative;
     background-color: ${laranja};
     padding: 10px 50px;
@@ -36,7 +38,7 @@ export const BtnLaranja = styled.button `
     ${jost}
 `
 
-export const Title = styled.h1 `
+export const Title = styled.h1`
     ${sancreek}
     font-size: 100px;
     font-weight:400;
@@ -45,14 +47,43 @@ export const Title = styled.h1 `
         font-size: 80px;
     }
 `
-export const ContainerPage = styled.main `
+
+export const ContainerPage = styled.main`
     display: flex;
     flex-direction: column;
     background-color:${preto};
 
 `
+export const ContainerPageLogin = styled.main`   
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content:center;
+    height: 650px;
+    background-color:${preto};
+    background-image: url(${backLogin});
+    background-position: center;
+    background-size: cover;
+}
+`
 
-export const ContainerBanner = styled.section `
+export const ContainerForm = styled.form`   
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1%;
+    margin-top: 110px;
+    gap: 20px;
+    background-color:${gelo};
+    height: 400px;
+    width: 400px;
+    border-radius: 3%
+}
+`
+
+export const ContainerBanner = styled.section`
     display: flex;
     align-items: center;
     padding: 0 150px;
@@ -69,7 +100,7 @@ export const ContainerBanner = styled.section `
     }
 `
 
-export const ContainerCard = styled.section `
+export const ContainerCard = styled.section`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -81,7 +112,7 @@ export const ContainerCard = styled.section `
     }
 `
 
-export const CardBox = styled.div `
+export const CardBox = styled.div`
     min-height: auto;
     margin: 100px 200px;
     display: flex;
