@@ -17,7 +17,7 @@ const NavBar = ({column,gap,none}) => {
       </li>
       <li>
         <BtnLaranja>
-          <Link to="/">Login</Link>
+          <Link to="/login">Login</Link>
         </BtnLaranja>
       </li>
     </NavBarStyled>
