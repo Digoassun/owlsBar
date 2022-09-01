@@ -57,20 +57,17 @@ export const ContainerPage = styled.main`
 export const ContainerPageLogin = styled.main`   
     display: flex;
     flex-direction: row;
-    align-itens: center;
     justify-content:center;
     height: 650px;
     background-color:${preto};
     background-image: url(${backLogin});
     background-position: center;
     background-size: cover;
-}
 `
 
 export const ContainerForm = styled.form`   
     display: flex;
     flex-direction: column;
-    align-itens: center;
     justify-content: center;
     text-align: center;
     padding: 1%;
@@ -79,8 +76,7 @@ export const ContainerForm = styled.form`
     background-color:${gelo};
     height: 400px;
     width: 400px;
-    border-radius: 3%
-}
+    border-radius: 3%;
 `
 
 export const ContainerBanner = styled.section`

@@ -1,9 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Routes from './routes'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import OwlsBarProvider from "./context/OwlsBarProvider";
+import Routes from "./routes";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Routes/>
+    <OwlsBarProvider>
+      <Routes />
+    </OwlsBarProvider>
   </React.StrictMode>
-)
+);

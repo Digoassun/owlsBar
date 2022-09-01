@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes as Switcher, Route } from "react-router-dom";
+import Footer from './components/Footer';
 import Header from "./components/Header";
 import Add from "./pages/Add/Add";
 import Cardapio from "./pages/Cardarpio/Cardapio";
@@ -21,6 +22,7 @@ const Routes = () => {
           <Route path="/adicionar" element={<Add/>}/>
           <Route path='/login' element={<Login/>} />
         </Switcher>
+        <Footer/>
       </BrowserRouter>
     </>
   )

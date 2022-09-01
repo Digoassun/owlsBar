@@ -4,7 +4,7 @@ import logo from "../../assets/logo-header.png";
 import { Link } from "react-router-dom";
 import NavBar from "../NavBar";
 import { MenuHamburguer } from "../MenuHamburguer";
-import {RiMenu3Fill} from "react-icons/ri";
+import {AiOutlineMenu} from "react-icons/ai";
 
 const Header = () => {
   const [menu, setMenu] = useState(false)
@@ -20,7 +20,7 @@ const Header = () => {
         <img src={logo} alt="logo" />
       </Link>
       <NavBar/>
-      <RiMenu3Fill className="hamburguer" size={45} onClick={()=>setMenu(true)}/>
+      <AiOutlineMenu className="hamburguer" size={45} onClick={()=>setMenu(true)}/>
     </HeaderStyled>
     </>
   );
