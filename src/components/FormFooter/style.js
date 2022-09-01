@@ -28,16 +28,6 @@ export const FormFooterStyled = styled.form `
     div{
         display: flex;
     gap: 20px;
-
     }
-    input{
-        background-color: white;
-        border-radius: 7px 7px 0 0;
-        width: 400px;
-        height: 15px;
-        @media(max-width:1250px){   
-            width: 200px;
-            height: 15px;
-        }
-    }
+    
 `

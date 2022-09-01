@@ -1,15 +1,14 @@
 import React from 'react'
-import { FormAddEdit } from '../../components/FromAddEdit/styles'
+
 import { GridPage } from '../../styles/globalStyles'
-import img_add from '../../assets/img-add-edit.png'
+import FigureAdd from '../../components/FigureAdd/FigureAdd'
+import FromAddEdit from '../../components/FromAddEdit'
 
 const Add = () => {
   return (
     <GridPage>
-      <FormAddEdit/>
-      <figure>
-        <img src={img_add} alt="bebida" />
-      </figure>
+      <FromAddEdit text="Adicionar item"/>
+      <FigureAdd/>
     </GridPage>
   )
 }
