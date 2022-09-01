@@ -1,3 +1,13 @@
+import { createTheme } from "@mui/material/styles"
+
+export const theme = createTheme({
+    palette:{
+        primary:{
+            main:"#994B22"
+        }
+    }
+})
+
 export const laranja = "#994B22"
 export const cinza = "#212227"
 export const gelo = "#D9D9D9"
