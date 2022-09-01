@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
-    cinza, branco
+    cinza,
+    branco
 } from '../../styles/variaveis'
 
 export const HeaderStyled = styled.header `
@@ -29,9 +30,12 @@ export const HeaderStyled = styled.header `
     }
 
     @media(max-width:500px){
+    padding: 0 50px;
+
     img{
         width: 140px;
         height: 70px;
     }
+
     }
 `
