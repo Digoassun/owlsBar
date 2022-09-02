@@ -26,19 +26,18 @@ export const InputFormMod = styled(InputForm)`
 `
 
 export const FormAddEditStyle = styled.form `
-    min-height: 700px;
+    min-height: 650px;
     border-radius: 20px;
     background-color: #E5E5E599;
     padding:10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     fieldset{
         min-height: 500px;
         border: none;
         display: flex;
         flex-direction:column;
-        gap: 60px;
+        gap: 50px;
         align-items: center;
         div{
         border-radius: 7px 7px 0 0;
