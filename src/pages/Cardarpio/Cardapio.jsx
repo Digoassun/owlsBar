@@ -8,7 +8,7 @@ import {
   ContainerPage,
   Title,
 } from "../../styles/globalStyles";
-import { api } from "../../services/api";
+import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
 
 const Cardapio = () => {
@@ -25,14 +25,11 @@ const Cardapio = () => {
     }
   });
 
-  const handleLoadReq = () => {
-    api.get("menu").then((response) => {
-      setInfos(response.data.dados);
-    });
+  const handleLoadReq = async () => {
+    setInfos(await getProdutos() )
   };
 
   const handleChange = (e) => {
-    e.preventDefault();
     setValue(e.target.value);
   };
 
