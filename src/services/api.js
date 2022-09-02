@@ -15,7 +15,7 @@ export const deleteProduto = async (produto) => {
 
 export const postProduto = async (body) => {
   const response = await api.post("/menu", body);
-  return await response.data.dados;
+  return response.data.dados;
 };
 
 // export const postProduto = async (data) => {
