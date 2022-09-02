@@ -32,10 +32,19 @@ export const TitleWelcome = styled(Title)
             width:300px;
             }
 `
-export const TitleCorousel = styled(Title)
+export const TitleCorousel = styled(Title)`
+    color:${laranja};
+    @media(max-width:1100px){
+        font-size: 60px;
+    }
+    @media(max-width:500px){
+        font-size: 40px;
+    }
 `
-    color:${laranja}
+export const TitleSabores = styled(Title)`
+    color: ${cinza};
 `
+
 export const ContainerWelcome = styled.section `
     position: relative;
     overflow: hidden;
@@ -78,13 +87,13 @@ export const ContainerWelcome = styled.section `
 export const ContainerCarousel = styled.section `
     position: relative;
     overflow: hidden;
+    padding-bottom:20px;
     .divTexto{        
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;        
-        
     }
     .blur{
         position: absolute;
@@ -93,39 +102,70 @@ export const ContainerCarousel = styled.section `
         width: 100%;
         height: auto;
     }
-
     p{
         color:${gelo};
         font-size: 24px;
         text-align: center;
-        width: 1500px;
+        padding: 10px 0;
+        line-height: 0.7;
+        @media(max-width:1500px){
+            font-size: 18px;
+        }
+        @media(max-width:1100px){
+            font-size: 14px;
+        }
+        @media(max-width:900px){
+            display: none;
+        }
     }
-    .swiper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-}  
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .carousel{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        .swiper {
+        width: 100%;
+        height: 100%;
+        }  
+        .swiper-slide {
+            min-height:100%;
+            text-align: center;
+            background: transparent;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }  
+        .swiper-slide img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+`
+
+export const ContainerSabores = styled.section`
+    position: relative;
+    overflow: hidden;
+    background-color: ${cinza};
+    div{        
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }   
 `
