@@ -1,6 +1,6 @@
 # 🦉 Owl's Bar 🦉
 
-<img src="./src/assets/imgReadme.png"/>
+<img align="center" src="./src/assets/imgReadme.png"/>
 
 <div align="center">
 
