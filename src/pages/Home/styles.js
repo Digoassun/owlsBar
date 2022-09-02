@@ -42,7 +42,13 @@ export const TitleCorousel = styled(Title)`
     }
 `
 export const TitleSabores = styled(Title)`
-    color: ${cinza};
+    color: ${gelo};
+    font-size:50px;
+    text-align: center;
+    @media(max-width:700px){
+        font-size: 25px;
+        /* width:300px; */
+    }
 `
 
 export const ContainerWelcome = styled.section `
@@ -152,14 +158,24 @@ export const ContainerCarousel = styled.section `
 
 export const ContainerSabores = styled.section`
     position: relative;
-    overflow: hidden;
     background-color: ${cinza};
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     div{        
+        display: flex;        
+        align-items: center;
+        width: 620px;
+        height:520px;
         position: relative;
         z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @media(max-width:800px){
+            height: 350px;
+        }
+        @media(max-width:500px){
+            height: 250px;
+        }
     }
     img{
         position: absolute;
@@ -167,5 +183,6 @@ export const ContainerSabores = styled.section`
         top: 0;
         width: 100%;
         height: auto;
+        opacity:0.5;
     }   
 `
