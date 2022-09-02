@@ -3,7 +3,6 @@ import { GoTrashcan } from "react-icons/go";
 import { BsPencilSquare } from "react-icons/bs";
 import { CardStyle } from "./styles";
 import { Link } from "react-router-dom";
-import { api } from "../../services/api";
 
 const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct }) => {  
   const handleProduct = () =>{

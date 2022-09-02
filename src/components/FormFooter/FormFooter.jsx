@@ -1,7 +1,8 @@
 import React from "react";
-import { TextField, ThemeProvider } from "@mui/material";
+import {  ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { BtnFormFooter, FormFooterStyled } from "./style";
+import { InputForm } from "../../styles/globalStyles";
 
 const FormFooter = () => {
   return (
@@ -9,14 +10,13 @@ const FormFooter = () => {
         <label className="label">Receba as notícias mais recentes:</label>      
       <div>
         <ThemeProvider theme={theme}>
-          <TextField
+          <InputForm
             id="filled-basic"
             variant="filled"
             label="Insira seu e-mail"
             type="text"
             color="primary"
             size="small"
-            // fullWidth 
           />
         </ThemeProvider>
         <BtnFormFooter>Me inscrever</BtnFormFooter>
