@@ -94,6 +94,10 @@ export const ContainerCarousel = styled.section `
     position: relative;
     overflow: hidden;
     padding-bottom:20px;
+
+    .swiper-button-next, .swiper-button-prev{
+        color:${laranja};
+    }
     .divTexto{        
         position: relative;
         z-index: 2;

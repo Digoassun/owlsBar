@@ -18,8 +18,9 @@ export const FooterStyled = styled.footer `
         padding:0 40px;
     }
     @media(max-width:800px){  
-                align-items: center;
-            }
+            align-items: center;
+            justify-content: space-evenly;
+        }
     img{
         width: 200px;
         height: 100px;
@@ -60,7 +61,7 @@ export const FooterStyled = styled.footer `
     }
     hr{
         @media(max-width:800px){  
-                display: none;
+            width: 100%;
             }
     }
     .sectionLow{
@@ -74,6 +75,9 @@ export const FooterStyled = styled.footer `
             font-size: 12px;
             gap: 30px;
             color: ${gelo};        
+            @media(max-width:800px){  
+                display: none;
+            }
         }
         p{           
             ${jost}
@@ -82,7 +86,7 @@ export const FooterStyled = styled.footer `
             
         }
         @media(max-width:800px){  
-                display: none;
+                align-items:center;
             }
     }
     
