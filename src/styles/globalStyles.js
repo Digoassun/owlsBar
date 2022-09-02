@@ -11,7 +11,9 @@ import {
 } from "./variaveis";
 import banner from '../assets/banner-cardapio.png'
 import backLogin from '../assets/fundo-login.png'
-import { TextField } from "@mui/material";
+import {
+    TextField
+} from "@mui/material";
 
 export const GlobalStyle = createGlobalStyle `
   *{
@@ -139,13 +141,12 @@ export const GridPage = styled.section `
 `
 export const InputForm = styled(TextField)`    
     input,textarea{
-        background-color: white;
         border-radius: 7px 7px 0 0;
+        background-color: white;
         width: 400px;
-        height: 15px;
+        height: 15px;        
         @media(max-width:1250px){   
             width: 200px;
-            height: 15px;
         }
     }
 `
