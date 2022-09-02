@@ -13,7 +13,7 @@ const NavBar = ({column,gap,none}) => {
         <Link to="/cardapio">Cardápio</Link>
       </li>
       <li>
-        <Link to="/">Contato</Link>
+        <Link to="/contato">Contato</Link>
       </li>
       <li>
         <BtnLaranja>

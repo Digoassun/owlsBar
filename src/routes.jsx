@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Header from "./components/Header";
 import Add from "./pages/Add/Add";
 import Cardapio from "./pages/Cardarpio/Cardapio";
+import Contato from './pages/Contato/Contato';
 import Edit from "./pages/Edit/Edit";
 import Home from "./pages/Home/Home";
 import Login from './pages/Login/Login';
@@ -21,6 +22,8 @@ const Routes = () => {
           <Route path="/editar" element={<Edit/>}/>
           <Route path="/adicionar" element={<Add/>}/>
           <Route path='/login' element={<Login/>} />
+          <Route path='/contato' element={<Contato/>} />
+
         </Switcher>
         <Footer/>
       </BrowserRouter>
