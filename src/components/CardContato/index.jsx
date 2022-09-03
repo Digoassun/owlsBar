@@ -1,24 +1,23 @@
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import rodrigo from '../../assets/rodrigo.jpg'
 import { CardContatoStyled } from "./styles";
 
-const CardContato = ({ github, linkedin }) => {
+const CardContato = ({ img,nome,stack,github, linkedin }) => {
   return (
     <CardContatoStyled>
       <figure>
-        <img src={rodrigo} alt="foto do membro da equipe" />
+        <img src={img} alt="foto do membro da equipe" />
       </figure>
       <div>
-        <h2>Rodrigo</h2>
-        <h3>Desenvolvedor Fullstack</h3>
+        <h2>{nome}</h2>
+        <h3>{stack}</h3>
       </div>
       <div>
-        <a href={linkedin}>
-          <AiFillLinkedin size={50} cursor="pointer" />
+        <a href={linkedin} target="_blank">
+          <AiFillLinkedin size={50} cursor="pointer" color="black" />
         </a>
-        <a href={github}>
-          <AiFillGithub size={50} cursor="pointer"/>
+        <a href={github} target="_blank">
+          <AiFillGithub size={50} cursor="pointer" color="black"/>
         </a>
       </div>
     </CardContatoStyled>
