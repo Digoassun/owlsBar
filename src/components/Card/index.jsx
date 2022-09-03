@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { GoTrashcan } from "react-icons/go";
 import { BsPencilSquare } from "react-icons/bs";
 import { CardStyle } from "./styles";
 import { Link } from "react-router-dom";
 
-const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint }) => {  
+const Card = ({ login,img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint }) => {  
+
   const handleProduct = () =>{
     setIsOpen(true)
     setSelectedProduct(produto)
@@ -20,12 +21,14 @@ const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint
         <h3>{produto.toUpperCase()}</h3>
         <p>{desc}</p>
         <div className="editPrice">
+          {!login?'':
           <div className="icons">
             <Link to={endPoint}>
               <BsPencilSquare color={"#000"} size={25} />
             </Link>
             <GoTrashcan color={"#000"} size={25} onClick={handleProduct}/>
           </div>
+          }
           <h4>
             a partir de:<span>R${preco}</span>
           </h4>
