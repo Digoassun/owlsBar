@@ -62,6 +62,7 @@ const Cardapio = () => {
                     desc={item.descricao}
                     preco={item.valor}
                     setIsOpen={setIsOpen}
+                    endPoint={`/edit/${item.produto}`}
                     setSelectedProduct={setSelectedProduct}
                   />
                 );
