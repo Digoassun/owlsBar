@@ -9,8 +9,7 @@ import {
     satisfy
 } from "../../styles/variaveis";
 
-export const TitleWelcome = styled(Title)
-`
+export const TitleWelcome = styled(Title)`
     font-size: 80px;
     ${satisfy}
     text-align: center;
@@ -47,7 +46,6 @@ export const TitleSabores = styled(Title)`
     text-align: center;
     @media(max-width:700px){
         font-size: 25px;
-        /* width:300px; */
     }
 `
 
