@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import React from "react";
 import { GoTrashcan } from "react-icons/go";
 import { BsPencilSquare } from "react-icons/bs";
 import { CardStyle } from "./styles";
 import { Link } from "react-router-dom";
 
-const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint }) => {  
-  const { login } = useContext(OwlsBarContext);
+const Card = ({ login,img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint }) => {  
 
   const handleProduct = () =>{
     setIsOpen(true)

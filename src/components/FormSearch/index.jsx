@@ -1,11 +1,9 @@
-import React,{useContext} from "react";
-import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import React from "react";
 import { BtnSearch, FormStyled } from "./styles";
 import { Link } from "react-router-dom";
 
 
-const FormSearch = ({value, handleChange}) => {
-  const { login } = useContext(OwlsBarContext);
+const FormSearch = ({login,value, handleChange}) => {
 
   return (
     <FormStyled>

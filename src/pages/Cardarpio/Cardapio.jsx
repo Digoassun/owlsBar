@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
+import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import Card from "../../components/Card";
 import FormSearch from "../../components/FormSearch";
 import {
@@ -12,6 +13,7 @@ import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
 
 const Cardapio = () => {
+  const { login } = useContext(OwlsBarContext);
 
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
@@ -51,7 +53,7 @@ const Cardapio = () => {
           <Title>Cardápio</Title>
         </ContainerBanner>
         <ContainerCard>
-          <FormSearch value={value} handleChange={handleChange} />
+          <FormSearch value={value} handleChange={handleChange} login={login} />
           <CardBox>
             {infos.length > 0 &&
               results.map((item, index) => {
@@ -65,6 +67,7 @@ const Cardapio = () => {
                     setIsOpen={setIsOpen}
                     endPoint={`/edit/${item.produto}`}
                     setSelectedProduct={setSelectedProduct}
+                    login={login}
                   />
                 );
               })}
