@@ -18,6 +18,10 @@ export const postProduto = async (body) => {
   return response.data.dados;
 };
 
+export const updateProduto = async (produto,body) =>{
+  await api.put(`/menu/produto/${produto}`,body)
+}
+
 // export const postProduto = async (data) => {
 //   const response = await api.post("/menu", data)
 //   return response.data.dados;

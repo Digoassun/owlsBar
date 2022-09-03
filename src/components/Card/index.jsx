@@ -4,7 +4,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import { CardStyle } from "./styles";
 import { Link } from "react-router-dom";
 
-const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct }) => {  
+const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct,endPoint }) => {  
   const handleProduct = () =>{
     setIsOpen(true)
     setSelectedProduct(produto)
@@ -21,7 +21,7 @@ const Card = ({ img, produto, desc, preco,setIsOpen, setSelectedProduct }) => {
         <p>{desc}</p>
         <div className="editPrice">
           <div className="icons">
-            <Link to="/edit">
+            <Link to={endPoint}>
               <BsPencilSquare color={"#000"} size={25} />
             </Link>
             <GoTrashcan color={"#000"} size={25} onClick={handleProduct}/>
