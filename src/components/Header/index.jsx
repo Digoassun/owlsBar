@@ -19,7 +19,7 @@ const Header = () => {
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
-      <NavBar/>
+      <NavBar setMenu={setMenu}/>
       <AiOutlineMenu className="hamburguer" size={45} onClick={()=>setMenu(true)}/>
     </HeaderStyled>
     </>
