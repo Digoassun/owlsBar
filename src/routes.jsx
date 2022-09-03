@@ -19,7 +19,7 @@ const Routes = () => {
         <Switcher>
           <Route path="/" element={<Home/>}/>
           <Route path="/cardapio" element={<Cardapio/>}/>
-          <Route path="/editar" element={<Edit/>}/>
+          <Route path="/edit" element={<Edit/>}/>
           <Route path="/adicionar" element={<Add/>}/>
           <Route path='/login' element={<Login/>} />
           <Route path='/contato' element={<Contato/>} />
