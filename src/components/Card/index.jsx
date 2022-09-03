@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useContext } from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { GoTrashcan } from "react-icons/go";
 import { BsPencilSquare } from "react-icons/bs";

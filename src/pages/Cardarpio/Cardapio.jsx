@@ -12,6 +12,7 @@ import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
 
 const Cardapio = () => {
+
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
