@@ -1,8 +1,15 @@
 import React from 'react'
+import FigureAdd from '../../components/FigureAdd/FigureAdd'
+import FormAddEdit from '../../components/FormAddEdit'
+import { GridPage } from '../../styles/globalStyles'
 
 const Edit = () => {
   return (
-    <div>Edit</div>
+    <GridPage>
+      <FormAddEdit text="Editar item" txtBtn="Editar"/>
+      <FigureAdd/>
+    </GridPage>
+    
   )
 }
 
