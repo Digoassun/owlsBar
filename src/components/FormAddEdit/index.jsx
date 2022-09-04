@@ -6,9 +6,6 @@ import { BtnLaranja } from "../../styles/globalStyles";
 import { postProduto, updateProduto } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
-import IconButton from '@mui/material/IconButton';
-
 const FormAddEdit = ({ text, txtBtn }) => {
   const [produtos, setProdutos] = useState({
     produto: "",
