@@ -38,7 +38,7 @@ export const BtnLaranja = styled.button `
     border-radius: 10px;
     border: none;
     color:${branco};
-    ${jost}
+    ${jost}    
 `
 
 export const Title = styled.h1 `
