@@ -34,7 +34,7 @@ export const CardStyle = styled.article `
             display: flex;
             flex-wrap: wrap;
             color: grey;
-            font-size: 12px;
+            font-size: 14px;
         }
 
     }

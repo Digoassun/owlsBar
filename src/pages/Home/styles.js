@@ -42,8 +42,7 @@ export const TitleCorousel = styled(Title)
         font-size: 40px;
     }
 `
-export const TitleSabores = styled(Title)
-`
+export const TitleSabores = styled(Title)`
     color: ${gelo};
     font-size:50px;
     text-align: center;
