@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {
     jost,
-    branco
+    branco,
+    laranja
 } from "../../styles/variaveis";
 
 export const NavBarStyled = styled.ul `
@@ -18,7 +19,16 @@ export const NavBarStyled = styled.ul `
             font-size: 20px;
             font-weight: 700;
             letter-spacing: 0.3px;
+            transition: all 0.3s;
         }
+        a:hover,.active{
+            color: ${laranja};
+        }
+
+        .btn:hover{
+            color: white;
+        }
+        
     }
 
     @media(max-width:1000px){

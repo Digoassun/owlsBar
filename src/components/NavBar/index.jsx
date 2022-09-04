@@ -1,6 +1,6 @@
 import React,{useContext} from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { BtnLaranja } from "../../styles/globalStyles";
 import { NavBarStyled } from "./style";
 
@@ -10,22 +10,22 @@ const NavBar = ({column,gap,none,setMenu}) => {
   return (
     <NavBarStyled column={column} gap={gap} none={none}>
       <li>
-        <Link to="/" onClick={()=>setMenu(false)}>Home</Link >
+        <NavLink to="/" onClick={()=>setMenu(false)}>Home</NavLink >
       </li>
       <li>
-        <Link to="/cardapio" onClick={()=>setMenu(false)}>Cardápio</Link>
+        <NavLink to="/cardapio" onClick={()=>setMenu(false)}>Cardápio</NavLink>
       </li>
       <li>
-        <Link to="/contato" onClick={()=>setMenu(false)}>Contato</Link>
+        <NavLink to="/contato" onClick={()=>setMenu(false)}>Contato</NavLink>
       </li>
       <li>
         {!login? 
         <BtnLaranja>
-          <Link to="/login" onClick={()=>setMenu(false)}>Login</Link>
+          <Link className="btn" to="/login" onClick={()=>setMenu(false)}>Login</Link>
         </BtnLaranja>
         :
         <BtnLaranja >
-           <Link to="/" onClick={()=>setLogin(false)}>Sair</Link>
+          <Link className="btn" to="/" onClick={()=>setLogin(false)}>Sair</Link>
         </BtnLaranja>
         }
       </li>

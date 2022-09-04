@@ -9,7 +9,8 @@ import {
     satisfy
 } from "../../styles/variaveis";
 
-export const TitleWelcome = styled(Title)`
+export const TitleWelcome = styled(Title)
+`
     font-size: 80px;
     ${satisfy}
     text-align: center;
@@ -31,7 +32,8 @@ export const TitleWelcome = styled(Title)`
             width:300px;
             }
 `
-export const TitleCorousel = styled(Title)`
+export const TitleCorousel = styled(Title)
+`
     color:${laranja};
     @media(max-width:1100px){
         font-size: 60px;
@@ -40,7 +42,8 @@ export const TitleCorousel = styled(Title)`
         font-size: 40px;
     }
 `
-export const TitleSabores = styled(Title)`
+export const TitleSabores = styled(Title)
+`
     color: ${gelo};
     font-size:50px;
     text-align: center;
@@ -84,7 +87,7 @@ export const ContainerWelcome = styled.section `
         top: 0;
         width: 100%;
         height: auto;
-        opacity: 0.5;
+        opacity: 0.3;
     }
 `
 
@@ -101,7 +104,10 @@ export const ContainerCarousel = styled.section `
         z-index: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;        
+        align-items: center;
+        div{
+            padding: 10px 0;
+        }
     }
     .blur{
         position: absolute;
@@ -115,7 +121,7 @@ export const ContainerCarousel = styled.section `
         font-size: 24px;
         text-align: center;
         padding: 10px 0;
-        line-height: 0.7;
+        line-height: 0.2;
         @media(max-width:1500px){
             font-size: 18px;
         }
@@ -152,13 +158,13 @@ export const ContainerCarousel = styled.section `
             align-items: center;
         }  
         .swiper-slide img {
-            width: 50%;
-            height: 50%;
+            width: 60%;
+            height: 60%;
         }
     }
 `
 
-export const ContainerSabores = styled.section`
+export const ContainerSabores = styled.section `
     position: relative;
     background-color: ${cinza};
     overflow: hidden;

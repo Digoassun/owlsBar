@@ -36,18 +36,20 @@ const Home = () => {
       <ContainerCarousel>
         <div className="divTexto">
           <TitleCorousel>Galeria</TitleCorousel>
-          <p>
-            O cardápio do pub contempla cervejas vindas de diversos países.
-            Também excelentes tipos de whiskys, bem como variedades de gin,
-          </p>
-          <p>
-            rum, vodka, coqueteis e drinks únicos de dar água na boca. Entre os
-            pratos e acompanhamentos é possível perceber a mistura de
-          </p>
-          <p>
-            temperos brasileiros e unicamente preparados pelos chefs do Owl's
-            Bar. Viva essa experiência!
-          </p>
+          <div>
+            <p>
+              O cardápio do pub contempla cervejas vindas de diversos países.
+              Também excelentes tipos de whiskys, bem como variedades de gin,
+            </p>
+            <p>
+              rum, vodka, coqueteis e drinks únicos de dar água na boca. Entre os
+              pratos e acompanhamentos é possível perceber a mistura de
+            </p>
+            <p>
+              temperos brasileiros e unicamente preparados pelos chefs do Owl's
+              Bar. Viva essa experiência!
+            </p>
+          </div>
         </div>
         <div className="carousel">
           <Swiper navigation={true} modules={[Navigation]} className="swiper">
