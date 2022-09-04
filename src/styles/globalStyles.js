@@ -38,7 +38,7 @@ export const BtnLaranja = styled.button `
     border-radius: 10px;
     border: none;
     color:${branco};
-    ${jost}    
+    ${jost}
 `
 
 export const Title = styled.h1 `
@@ -60,7 +60,8 @@ export const ContainerPageLogin = styled.main `
     display: flex;
     flex-direction: row;
     justify-content:center;
-    height: 650px;
+    align-items: center;
+    min-height: 650px;
     background-color:${preto};
     background-image: url(${backLogin});
     background-position: center;
@@ -70,10 +71,9 @@ export const ContainerPageLogin = styled.main `
 export const ContainerForm = styled.form `   
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
-    padding: 1%;
-    margin-top: 110px;
+    padding: 20px;
     gap: 20px;
     background-color:${gelo};
     height: 400px;

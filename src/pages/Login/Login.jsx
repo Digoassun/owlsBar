@@ -10,7 +10,7 @@ import {
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 
 const Login = () => {
@@ -79,6 +79,7 @@ const Login = () => {
           />
         </ThemeProvider>
         <BtnLaranja onClick={handleValidaLogin}>ENTRAR</BtnLaranja>
+        <p>Não tem login?<Link to="/cadastro">Cadastre-se!</Link></p>
       </ContainerForm>
     </ContainerPageLogin>
   );
