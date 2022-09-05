@@ -9,7 +9,11 @@ const OwlsBarProvider =({children}) => {
     const loginA = getUsuario&&getSenha
     const [login, setLogin] = useState(false)
     const [view,setView] = useState(false)
-
+    const [error, setError] = useState(false)
+    const [input, setInput] = useState({
+        usuario: "",
+        senha: "",
+    });
 
     const usuarios = [
         {
@@ -23,10 +27,6 @@ const OwlsBarProvider =({children}) => {
         senha: "garçom123",
         },
     ];
-    const [input, setInput] = useState({
-        usuario: "",
-        senha: "",
-    });
     const handleChange = (target, key) => {
         const value = target.value;
         setInput({ ...input, [key]: value });
@@ -35,19 +35,21 @@ const OwlsBarProvider =({children}) => {
     const handleLogout = ()=>{
         localStorage.clear()
         setLogin(false)
+        setInput('')
     }
-
 
     const context ={
         loginA:loginA,
         input:input,
         usuarios:usuarios,
         login: login,
+        view:view,
+        error:error,
         handleChange:handleChange,        
         handleLogout:handleLogout,
         setLogin: setLogin,
-        view:view,
         setView:setView,
+        setError:setError,
     }
     return(
         <OwlsBarContext.Provider value={context}>{children}</OwlsBarContext.Provider>

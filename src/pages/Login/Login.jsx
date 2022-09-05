@@ -5,6 +5,7 @@ import {
   BtnLaranja,
   ContainerPageLogin,
   ContainerForm,
+  ErrorStyled,
 } from "../../styles/globalStyles";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
@@ -14,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { input,handleChange,usuarios,setLogin } = useContext(OwlsBarContext);
+  const { input,handleChange,usuarios,setLogin,setError,error} = useContext(OwlsBarContext);
     
   const handleLogin = (e) => {        
     e.preventDefault();
@@ -26,8 +27,9 @@ const Login = () => {
         localStorage.setItem("senha",input.senha)
         setLogin(true)
         navigate('/cardapio')
+        setError(false)
     } else {
-        return <p>Usuário ou senha incorretos</p>;
+        setError(true)
     }
 };
   return (
@@ -58,6 +60,7 @@ const Login = () => {
             onChange={({ target }) => handleChange(target, "senha")}
           />
         </ThemeProvider>
+        {error?<ErrorStyled>Preencha os dados corretamente!</ErrorStyled>:""}        
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
       </ContainerForm>
     </ContainerPageLogin>
