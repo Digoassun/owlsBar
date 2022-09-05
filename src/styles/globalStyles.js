@@ -15,7 +15,7 @@ import {
     TextField
 } from "@mui/material";
 
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
   *{
     box-sizing: border-box;
     margin: 0;
@@ -33,10 +33,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-/* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+
+  
 }
 `
 export const BtnLaranja = styled.button `

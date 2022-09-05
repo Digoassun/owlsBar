@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import { BtnLaranja } from "../../styles/globalStyles";
 import {
     jost,
     branco,
     laranja
 } from "../../styles/variaveis";
+
+export const BtnStyled = styled(BtnLaranja)`
+    font-size: 20px;
+`
 
 export const NavBarStyled = styled.ul `
     list-style-type: none;
@@ -24,7 +29,7 @@ export const NavBarStyled = styled.ul `
         a:hover,.active{
             color: ${laranja};
         }
-
+        
         .btn:hover{
             color: white;
         }

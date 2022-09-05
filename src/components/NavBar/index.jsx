@@ -1,8 +1,7 @@
 import React,{useContext,useEffect} from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { NavLink,Link } from "react-router-dom";
-import { BtnLaranja } from "../../styles/globalStyles";
-import { NavBarStyled } from "./style";
+import { BtnStyled, NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none,setMenu}) => {
   const { login,handleLogout,loginA,setLogin } = useContext(OwlsBarContext);
@@ -25,13 +24,17 @@ const NavBar = ({column,gap,none,setMenu}) => {
       </li>
       <li>
         {login? 
-        <BtnLaranja >
-          <Link className="btn" to="/" onClick={handleLogout}>Sair</Link>
-        </BtnLaranja>
+          <Link className="btn" to="/" onClick={handleLogout}>
+              <BtnStyled >
+                Sair
+              </BtnStyled>
+          </Link>
         :
-        <BtnLaranja>
-          <Link className="btn" to="/login">Login</Link>
-        </BtnLaranja>
+          <Link className="btn" to="/login">
+            <BtnStyled>
+              Login
+            </BtnStyled>
+          </Link>
         }
       </li>
     </NavBarStyled>
