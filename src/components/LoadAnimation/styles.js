@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
+import styled from "styled-components";
 
-.box {
+export const Animation = styled.section `
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin-top: 10%;
+
+    .box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,12 +20,6 @@
   position: absolute;
 }
 
-.sec{
-  position: relative;
-  height: 120px;
-  width: 120px;
-  margin-top: 10%
-}
 
 .logoBox{
   margin-top: 10px;
@@ -81,3 +81,4 @@
     
   }
 }
+`
