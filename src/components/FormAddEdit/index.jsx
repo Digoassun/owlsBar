@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
@@ -6,7 +6,12 @@ import { BtnLaranja } from "../../styles/globalStyles";
 import { postProduto, updateProduto } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { OwlsBarContext } from "../../context/OwlsBarProvider";
+
+
 const FormAddEdit = ({ text, txtBtn }) => {
+  const { setView } = useContext(OwlsBarContext);
+
   const [produtos, setProdutos] = useState({
     produto: "",
     valor: "",
@@ -20,12 +25,15 @@ const FormAddEdit = ({ text, txtBtn }) => {
     e.preventDefault();
     postProduto(produtos);
     navigate("/cardapio");
+    setView(true)
   };
 
   const handleUpdate = (e) => {
     e.preventDefault();
     updateProduto(produto, produtos);
     navigate("/cardapio");
+    setView(true)
+
   };
 
   const handleChange = (target, key) => {

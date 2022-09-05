@@ -13,7 +13,7 @@ import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
 
 const Cardapio = () => {
-  const { login } = useContext(OwlsBarContext);
+  const { login,setView,view } = useContext(OwlsBarContext);
 
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
@@ -39,6 +39,13 @@ const Cardapio = () => {
   useEffect(() => {
     handleLoadReq();
   }, []);
+
+  useEffect(() => {
+    if(view){
+      handleLoadReq();
+      setView(false)
+    }
+  }, [view]);
   
 
   return (
