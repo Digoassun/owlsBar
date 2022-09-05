@@ -24,7 +24,6 @@ const Routes = () => {
           <Route path="/adicionar" element={<Add/>}/>
           <Route path='/login' element={<Login/>} />
           <Route path='/contato' element={<Contato/>} />
-          <Route path='/cadastro' element={<Cadastro/>} />
         </Switcher>
         <Footer/>
       </BrowserRouter>
