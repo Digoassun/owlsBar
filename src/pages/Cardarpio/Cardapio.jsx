@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import Card from "../../components/Card";
 import FormSearch from "../../components/FormSearch";
@@ -11,9 +11,10 @@ import {
 } from "../../styles/globalStyles";
 import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
+import LoadAnimation from "../../components/LoadAnimation/LoadAnimation";
 
 const Cardapio = () => {
-  const { login,setView,view } = useContext(OwlsBarContext);
+  const { login, setView, view } = useContext(OwlsBarContext);
 
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
@@ -29,7 +30,7 @@ const Cardapio = () => {
   });
 
   const handleLoadReq = async () => {
-    setInfos(await getProdutos() )
+    setInfos(await getProdutos())
   };
 
   const handleChange = (e) => {
@@ -37,15 +38,20 @@ const Cardapio = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
     handleLoadReq();
   }, []);
 
   useEffect(() => {
-    if(view){
+    if (view) {
       handleLoadReq();
       setView(false)
     }
   }, [view]);
+
+  const [loading, setLoading] = useState(true);
   
 
   return (
@@ -62,24 +68,28 @@ const Cardapio = () => {
         </ContainerBanner>
         <ContainerCard>
           <FormSearch value={value} handleChange={handleChange} login={login} />
-          <CardBox>
-            {infos.length > 0 &&
-              results.map((item, index) => {
-                return (
-                  <Card
-                    key={index}
-                    img={item.img}
-                    produto={item.produto}
-                    desc={item.descricao}
-                    preco={item.valor}
-                    setIsOpen={setIsOpen}
-                    endPoint={`/edit/${item.produto}`}
-                    setSelectedProduct={setSelectedProduct}
-                    login={login}
-                  />
-                );
-              })}
-          </CardBox>
+          {loading ? (
+            <LoadAnimation />
+          ) : (
+            <CardBox>
+              {infos.length > 0 &&
+                results.map((item, index) => {
+                  return (
+                    <Card
+                      key={index}
+                      img={item.img}
+                      produto={item.produto}
+                      desc={item.descricao}
+                      preco={item.valor}
+                      setIsOpen={setIsOpen}
+                      endPoint={`/edit/${item.produto}`}
+                      setSelectedProduct={setSelectedProduct}
+                      login={login}
+                    />
+                  );
+                })}
+            </CardBox>
+          )}
         </ContainerCard>
       </ContainerPage>
     </>
