@@ -60,7 +60,6 @@ const Cardapio = () => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         selectedProduct={selectedProduct}
-        handleLoad={handleLoadReq}
       />
       <ContainerPage>
         <ContainerBanner>
