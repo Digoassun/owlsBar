@@ -11,11 +11,12 @@ import {
 } from "../../styles/globalStyles";
 import { getProdutos } from '../../services/api'
 import ModalDelete from "../../components/ModalDelete";
-import LoadAnimation from "../../components/LoadAnimation/LoadAnimation";
+import LoadAnimation from "../../components/LoadAnimation";
 
 const Cardapio = () => {
   const { login, setView, view } = useContext(OwlsBarContext);
 
+  const [loading, setLoading] = useState(true);
   const [infos, setInfos] = useState([]);
   const [value, setValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,6 @@ const Cardapio = () => {
     }
   }, [view]);
 
-  const [loading, setLoading] = useState(true);
   
 
   return (
