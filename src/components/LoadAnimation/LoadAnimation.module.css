@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap');
 
-body {
-  background-color: #212227;
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .box {
   display: flex;
   flex-direction: column;
@@ -19,18 +10,31 @@ body {
   border-radius: 50%;
   height: 120px;
   width: 120px;
-  animation: is-rotating 2s linear infinite;
+  animation: is-rotating 2s linear infinite;  
+  position: absolute;
+}
+
+.sec{
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin-top: 10%
+}
+
+.logoBox{
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .boxMoon {
   position: absolute;
-  animation: moon 4s ease-in-out;
+  animation: moon 1.5s ease-in-out;
   animation-delay: 1s;
 }
 
 .boxOwl {
   position: absolute;
-  animation: owl 4s ease-in 1s;
+  animation: owl 1.5s ease-in 1s;
 }
 
 .texto {

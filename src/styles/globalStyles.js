@@ -113,6 +113,7 @@ export const ContainerCard = styled.section `
     display: flex;
     flex-direction: column;
     margin:100px 0;
+    align-items: center;
 
     p{
         font-size: 50px;
