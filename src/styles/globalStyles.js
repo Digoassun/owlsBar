@@ -28,6 +28,16 @@ body,html{
     min-height: 100vh;
     width:100%;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 `
 export const BtnLaranja = styled.button `
     position: relative;
@@ -76,7 +86,7 @@ export const ContainerForm = styled.form `
     padding: 20px;
     gap: 20px;
     background-color:${gelo};
-    height: 400px;
+    min-height: 400px;
     width: 400px;
     border-radius: 3%;
 `
@@ -139,7 +149,8 @@ export const GridPage = styled.section `
     }
     }
 `
-export const InputForm = styled(TextField)`    
+export const InputForm = styled(TextField)
+`    
     input,textarea{
         border-radius: 7px 7px 0 0;
         background-color: white;
@@ -149,4 +160,11 @@ export const InputForm = styled(TextField)`
             width: 200px;
         }
     }
+`
+export const ErrorStyled = styled.p`
+    ${jost}
+    color: red;
+    font-size: 24px;
+    font-weight: 700;
+
 `

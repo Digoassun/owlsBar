@@ -2,7 +2,7 @@ import React, { useState,useContext } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
-import { BtnLaranja } from "../../styles/globalStyles";
+import { BtnLaranja, ErrorStyled } from "../../styles/globalStyles";
 import { postProduto, updateProduto } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -10,7 +10,7 @@ import { OwlsBarContext } from "../../context/OwlsBarProvider";
 
 
 const FormAddEdit = ({ text, txtBtn }) => {
-  const { setView } = useContext(OwlsBarContext);
+  const { setView,error,setError } = useContext(OwlsBarContext);
 
   const [produtos, setProdutos] = useState({
     produto: "",
@@ -23,17 +23,28 @@ const FormAddEdit = ({ text, txtBtn }) => {
 
   const handlePost = (e) => {
     e.preventDefault();
-    postProduto(produtos);
-    navigate("/cardapio");
-    setView(true)
+    if(!Object.values(produtos).includes("")){
+      postProduto(produtos);
+      navigate("/cardapio");
+      setView(true)
+      setError(false)
+    } else {
+      setError(true)
+    }
   };
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    updateProduto(produto, produtos);
-    navigate("/cardapio");
-    setView(true)
-
+    if(!Object.values(produtos).includes("")){
+      console.log(produtos)
+      navigate("/cardapio");
+      updateProduto(produto, produtos);
+      setView(true)
+      setError(false)
+    } else {
+      setError(true)
+    }   
+    
   };
 
   const handleChange = (target, key) => {
@@ -87,6 +98,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
             onChange={({ target }) => handleChange(target, "descricao")}
             value={produtos.descricao}
           />
+          {error?<ErrorStyled>Preencha os campos corretamente</ErrorStyled>:""}
           <BtnLaranja onClick={!produto ? handlePost : handleUpdate}>
             {txtBtn}
           </BtnLaranja>
