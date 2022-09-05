@@ -1,7 +1,6 @@
 import React,{ useContext } from "react";
 import { TextField } from "@mui/material";
 import { MenuItem } from "@mui/material";
-import { useState } from "react";
 import {
   BtnLaranja,
   ContainerPageLogin,
@@ -10,46 +9,27 @@ import {
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "./styles";
-import { useNavigate } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    const navigate = useNavigate();
-    const { setLogin } = useContext(OwlsBarContext);
-
-    const usuarios = [
-        {
-        value: "gerente",
-        label: "Gerente",
-        senha: "gerente123",
-        },
-        {
-        value: "garcom",
-        label: "Garçom",
-        senha: "garçom123",
-        },
-    ];
-    const [input, setInput] = useState({
-        usuario: "",
-        senha: "",
-    });
-    const handleChange = (target, key) => {
-        const value = target.value;
-        setInput({ ...input, [key]: value });
-    };
-    const handleValidaLogin = (e) => {
-        e.preventDefault();
-        if (
-        (usuarios[0].value === input.usuario && usuarios[0].senha === input.senha) ||
-        (usuarios[1].value === input.usuario && usuarios[1].senha === input.senha)
-        ) {
-            setLogin(true)
-            navigate("/cardapio");
-        } else {
-            return <p>Usuário ou senha incorretos</p>;
-        }
-    };
-
+  const navigate = useNavigate();
+  const { input,handleChange,usuarios,setLogin } = useContext(OwlsBarContext);
+    
+  const handleLogin = (e) => {        
+    e.preventDefault();
+    if (
+    (usuarios[0].value === input.usuario && usuarios[0].senha === input.senha) ||
+    (usuarios[1].value === input.usuario && usuarios[1].senha === input.senha)
+    ) {
+        localStorage.setItem("usuario",input.usuario)
+        localStorage.setItem("senha",input.senha)
+        setLogin(true)
+        navigate('/cardapio')
+    } else {
+        return <p>Usuário ou senha incorretos</p>;
+    }
+};
   return (
     <ContainerPageLogin>
       <ContainerForm>
@@ -78,7 +58,7 @@ const Login = () => {
             onChange={({ target }) => handleChange(target, "senha")}
           />
         </ThemeProvider>
-        <BtnLaranja onClick={handleValidaLogin}>ENTRAR</BtnLaranja>
+        <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
       </ContainerForm>
     </ContainerPageLogin>
   );
