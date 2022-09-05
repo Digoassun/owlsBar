@@ -1,12 +1,17 @@
-import React,{useContext} from "react";
+import React,{useContext,useEffect} from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { NavLink,Link } from "react-router-dom";
 import { BtnLaranja } from "../../styles/globalStyles";
 import { NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none,setMenu}) => {
-  const { login,setLogin } = useContext(OwlsBarContext);
+  const { login,handleLogout,loginA,setLogin } = useContext(OwlsBarContext);
 
+  useEffect(() => {
+    loginA?setLogin(true):setLogin(false)
+  }, [])
+  
+  
   return (
     <NavBarStyled column={column} gap={gap} none={none}>
       <li>
@@ -19,18 +24,19 @@ const NavBar = ({column,gap,none,setMenu}) => {
         <NavLink to="/contato" onClick={()=>setMenu(false)}>Contato</NavLink>
       </li>
       <li>
-        {!login? 
-        <BtnLaranja>
-          <Link className="btn" to="/login" onClick={()=>setMenu(false)}>Login</Link>
+        {login? 
+        <BtnLaranja >
+          <Link className="btn" to="/" onClick={handleLogout}>Sair</Link>
         </BtnLaranja>
         :
-        <BtnLaranja >
-          <Link className="btn" to="/" onClick={()=>setLogin(false)}>Sair</Link>
+        <BtnLaranja>
+          <Link className="btn" to="/login">Login</Link>
         </BtnLaranja>
         }
       </li>
     </NavBarStyled>
   );
+
 };
 
 export default NavBar;

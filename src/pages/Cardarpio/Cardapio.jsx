@@ -39,6 +39,7 @@ const Cardapio = () => {
   useEffect(() => {
     handleLoadReq();
   }, []);
+  
 
   return (
     <>

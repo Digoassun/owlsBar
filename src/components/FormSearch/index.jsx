@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 
 const FormSearch = ({ login, value, handleChange }) => {
+
   return (
     <FormStyled>
       <ThemeProvider theme={theme}>

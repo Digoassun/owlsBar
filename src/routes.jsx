@@ -3,7 +3,6 @@ import { BrowserRouter, Routes as Switcher, Route } from "react-router-dom";
 import Footer from './components/Footer';
 import Header from "./components/Header";
 import Add from "./pages/Add/Add";
-import Cadastro from './pages/Cadastro/Cadastro';
 import Cardapio from "./pages/Cardarpio/Cardapio";
 import Contato from './pages/Contato/Contato';
 import Edit from "./pages/Edit/Edit";
