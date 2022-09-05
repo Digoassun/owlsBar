@@ -1,9 +1,9 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext,useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
 import { BtnLaranja, ErrorStyled } from "../../styles/globalStyles";
-import { postProduto, updateProduto } from "../../services/api";
+import { postProduto, updateProduto,getProdutoParams } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
@@ -19,7 +19,13 @@ const FormAddEdit = ({ text, txtBtn }) => {
     descricao: "",
   });
   const navigate = useNavigate();
-  const { produto } = useParams();
+  const params  = useParams();
+  const produto = params.produto
+
+  const handleRequestParams = async () =>{
+    const response = await getProdutoParams(produto)
+    setProdutos(response)
+  }
 
   const handlePost = (e) => {
     e.preventDefault();
@@ -36,7 +42,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
   const handleUpdate = (e) => {
     e.preventDefault();
     if(!Object.values(produtos).includes("")){
-      console.log(produtos)
       navigate("/cardapio");
       updateProduto(produto, produtos);
       setView(true)
@@ -56,6 +61,12 @@ const FormAddEdit = ({ text, txtBtn }) => {
     const value = target.valueAsNumber;
     setProdutos({ ...produtos, [key]: value });
   };
+  useEffect(() => {
+    if(produto){
+      handleRequestParams()
+    }
+  }, [])
+  
   return (
     <FormAddEditStyle>
       <TitleMod>{text}</TitleMod>

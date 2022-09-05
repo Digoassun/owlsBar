@@ -1,14 +1,17 @@
 import { Dialog } from "@headlessui/react";
-import React from "react";
+import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import React,{useContext} from "react";
 import { BtnSearch } from "../FormSearch/styles";
 import { StyledDialog } from "./styles";
 import { deleteProduto } from "../../services/api";
 
-const ModalDelete = ({ selectedProduct, isOpen, setIsOpen, handleLoad }) => {
+const ModalDelete = ({ selectedProduct, isOpen, setIsOpen}) => {
+  const { setView } = useContext(OwlsBarContext);
+
   const handleDelete = async () => {
-    const request = await deleteProduto(selectedProduct)
-    handleLoad()
+    await deleteProduto(selectedProduct)
     setIsOpen(false);
+    setView(true)
   };
   
   return (
