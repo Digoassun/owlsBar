@@ -33,6 +33,7 @@ const Login = () => {
       if (response.login === input.login && response.senha === input.senha) {
         localStorage.setItem("login",input.login)
         localStorage.setItem("senha",input.senha)
+        localStorage.setItem("nome",response.nome)
         setLogin(true)
         navigate('/cardapio')
       } else {

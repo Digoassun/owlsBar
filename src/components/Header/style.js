@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import {
     cinza,
-    branco
+    branco,
+    gelo,
+    jost
 } from '../../styles/variaveis'
 
 export const HeaderStyled = styled.header `
@@ -12,6 +14,15 @@ export const HeaderStyled = styled.header `
     justify-content: space-between;
     padding: 0 100px;
     background-color:${cinza} ;
+
+    p{
+        color:${gelo};
+        ${jost}
+        font-size:24px;
+        @media(max-width:1100px){
+            display:none;
+        }
+    }
 
     img{
         width: 200px;

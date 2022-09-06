@@ -28,7 +28,7 @@ const Home = () => {
         <div>
           <img src={logoHome} alt="logo" />
           <TitleWelcome>
-            Sejam bem vindos a melhor experiência de todas!
+            Sejam bem-vindos a melhor experiência de todas!
           </TitleWelcome>
         </div>
         <img className="bannerHome" src={homeWelcome} alt="banner bem vindo" />

@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import { BtnLaranja } from "../../styles/globalStyles";
+import {
+    BtnLaranja
+} from "../../styles/globalStyles";
 import {
     jost,
     branco,
     laranja
 } from "../../styles/variaveis";
 
-export const BtnStyled = styled(BtnLaranja)`
-    font-size: 20px;
+export const BtnNav = styled(BtnLaranja)
+`
+    font-size: 24px;
+    padding: 7px 30px;
+    ${jost};    
+    font-weight: 700;
 `
 
 export const NavBarStyled = styled.ul `
@@ -20,8 +26,8 @@ export const NavBarStyled = styled.ul `
         padding: 0 10px;        
         a{
             color:${branco};
-            font-family:${jost};
-            font-size: 20px;
+            ${jost};
+            font-size: 24px;
             font-weight: 700;
             letter-spacing: 0.3px;
             transition: all 0.3s;
@@ -33,6 +39,12 @@ export const NavBarStyled = styled.ul `
         .btn:hover{
             color: white;
         }
+        /* div{
+            display: flex;
+            flex-direction: column;            
+            align-items:center;
+            justify-content:space-between;
+        } */
         
     }
 
