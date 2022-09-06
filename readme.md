@@ -6,7 +6,7 @@
 
 Esse é um site construido com `React`, seguindo as diretrizes do projeto de módulo final do bootcamp da Resilia Educação. O objetivo do site é consumir a <a href="https://github.com/Digoassun/APIRest_Pub/blob/master/readme.md"> **REST API** </a> (clique para verificar documentação) criada no módulo 4. Para desenvolver a aplicação também utilizamos react-router-dom, grid, styled-components e afins.
 
-## 🌐 Tecnologias
+## 🌐 Tecnologias:
 
 <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
 <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
@@ -15,14 +15,14 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 <img alt="styled-components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
 <img alt="MaterialUi" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" />
 
-## 🔸 Funcionalidades
+## 💡 Funcionalidades:
 
 * 🍺 Login para administrador
 * 🍺 Exibição de  itens contidos no cardápio (API) do bar 
 * 🍺 Deleção de itens contidos no cardápio (API) do bar
 * 🍺 Inclusão de itens no cardápio do (API) bar
 
-## 🧠 Escolhas no desenvolvimento
+## 🧠 Escolhas no desenvolvimento:
 
 ### Layout
 
@@ -53,7 +53,7 @@ yarn -OU- npm run dev
 ```
 Para rodar o projeto.
 
-## 📫 Como contribuir
+## 📫 Como contribuir:
 
 Para contribuir com nosso projeto, siga estas etapas:
 
