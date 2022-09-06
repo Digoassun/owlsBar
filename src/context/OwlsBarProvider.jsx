@@ -12,7 +12,6 @@ const OwlsBarProvider =({children}) => {
     const [error, setError] = useState(false)
     const [input, setInput] = useState({
         login:"",
-        usuario: "",
         senha: "",
         nome:"",
     });

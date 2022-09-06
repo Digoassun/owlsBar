@@ -12,6 +12,7 @@ import { TitleOrange } from "../Login/styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { useNavigate } from "react-router-dom";
 import { postFuncionario } from "../../services/api";
+import { validaEmpty, validaSenha,validaLogin } from "../../utils/utils";
 
 const Cadastro = () => {
   const navigate = useNavigate();
@@ -19,7 +20,15 @@ const Cadastro = () => {
 
   const handlePostFuncionario = (e) => {
     e.preventDefault();
-    postFuncionario(input);
+    if (
+      !validaEmpty(input) && 
+      validaSenha(input.senha) &&
+      validaLogin(input.login)) {
+      // postFuncionario(input);
+      console.log("certo");
+    } else {
+      console.log("errado");
+    }
     // navigate("/login");
   };
   return (
@@ -39,8 +48,8 @@ const Cadastro = () => {
             label="Login"
             type="text"
             variant="outlined"
-            value={input.usuario}
-            onChange={({ target }) => handleChange(target, "usuario")}
+            value={input.login}
+            onChange={({ target }) => handleChange(target, "login")}
           />
           <TextField
             label="Senha"
