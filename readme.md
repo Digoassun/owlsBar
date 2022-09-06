@@ -60,8 +60,7 @@ Para rodar o projeto.
 ## 🛣️ Rotas:
 
 * Rota ```'/'``` para página Home: Está é a primeira página com a qual o usuário se depara. Nela temos uma galeria com fotos do bar e o menu header onde o usuário pode navegar pelas outras páginas do site.
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/ljJfAchqjjE)
-<iframe src="https://youtu.be/ljJfAchqjjE" title="home"></iframe>
+[![Watch the video]](https://youtu.be/ljJfAchqjjE)
 
 * Rota ```'/cardapio'``` para página de Cárdapio: Na página de cardápio o usuário comum pode ver todos os itens servidos no bar ou pesquisar um específico. Caso uma pessoa logada com permissões maiores de acesso entre nessa página, ela também pode utilizar as funcionalidades de adicionar, deletar ou editar produtos.
 
