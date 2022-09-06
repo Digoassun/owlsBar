@@ -85,7 +85,7 @@ Para contribuir com nosso projeto, siga estas etapas:
  
 ## 🖊️ Autores: 
 
-<table>
+<table align="center">
  <tr>
    <td align="center">
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
