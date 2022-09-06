@@ -9,10 +9,10 @@ const OwlsBarProvider =({children}) => {
     const loginA = getUsuario&&getSenha
     const [login, setLogin] = useState(false)
     const [view,setView] = useState(false)
-    const [error, setError] = useState(false)
     const [input, setInput] = useState({
-        usuario: "",
+        login:"",
         senha: "",
+        nome:"",
     });
 
     const usuarios = [
@@ -44,12 +44,11 @@ const OwlsBarProvider =({children}) => {
         usuarios:usuarios,
         login: login,
         view:view,
-        error:error,
         handleChange:handleChange,        
         handleLogout:handleLogout,
+        setInput:setInput,
         setLogin: setLogin,
         setView:setView,
-        setError:setError,
     }
     return(
         <OwlsBarContext.Provider value={context}>{children}</OwlsBarContext.Provider>

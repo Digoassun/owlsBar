@@ -4,6 +4,7 @@ export const api = axios.create({
   baseURL: "https://api-pub-project.herokuapp.com",
 });
 
+//Produtos
 export const getProdutos = async () => {
   const response = await api.get("/menu");
   return response.data.dados;
@@ -27,9 +28,8 @@ export const updateProduto = async (produto,body) =>{
   await api.put(`/menu/produto/${produto}`,body)
 }
 
-
-// https://api-pub-project.herokuapp.com/menu -- Rota Get
-// https://api-pub-project.herokuapp.com/menu/produto/:produto -- Rota Get(parametro)
-// https://api-pub-project.herokuapp.com/menu -- Rota Post
-// https://api-pub-project.herokuapp.com/menu/produto/:produto -- Rota Put
-// https://api-pub-project.herokuapp.com/menu/produto/:produto -- Rota Delete
+//Funcionarios
+export const postFuncionario = async (body) => {
+  const response = await api.post("/staff", body);
+  return response.data.dados;
+};

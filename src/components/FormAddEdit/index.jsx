@@ -1,16 +1,22 @@
-import React, { useState,useContext,useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
-import { BtnLaranja, ErrorStyled } from "../../styles/globalStyles";
-import { postProduto, updateProduto,getProdutoParams } from "../../services/api";
+import { BtnLaranja } from "../../styles/globalStyles";
+import {
+  postProduto,
+  updateProduto,
+  getProdutoParams,
+} from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import { validaEmpty, validaDescricao } from "../../utils/utils";
+import { ToastContainer } from "react-toastify";
 
 
 const FormAddEdit = ({ text, txtBtn }) => {
-  const { setView,error,setError } = useContext(OwlsBarContext);
+  const { setView } = useContext(OwlsBarContext);
 
   const [produtos, setProdutos] = useState({
     produto: "",
@@ -19,37 +25,27 @@ const FormAddEdit = ({ text, txtBtn }) => {
     descricao: "",
   });
   const navigate = useNavigate();
-  const params  = useParams();
-  const produto = params.produto
+  const params = useParams();
+  const produto = params.produto;
 
-  const handleRequestParams = async () =>{
-    const response = await getProdutoParams(produto)
-    setProdutos(response)
-  }
-
-  const handlePost = (e) => {
-    e.preventDefault();
-    if(!Object.values(produtos).includes("")){
-      postProduto(produtos);
-      navigate("/cardapio");
-      setView(true)
-      setError(false)
-    } else {
-      setError(true)
-    }
+  const handleRequestParams = async () => {
+    const response = await getProdutoParams(produto);
+    setProdutos(response);
   };
 
-  const handleUpdate = (e) => {
+    const handleAction = (e) => {
     e.preventDefault();
-    if(!Object.values(produtos).includes("")){
+    if(validaDescricao(produtos.descricao) && !validaEmpty(produtos)){
+      if(produto){
+        updateProduto(produto, produtos);
+        
+      } else {
+        postProduto(produtos);
+        
+      }
       navigate("/cardapio");
-      updateProduto(produto, produtos);
-      setView(true)
-      setError(false)
-    } else {
-      setError(true)
-    }   
-    
+        setView(true);
+    } 
   };
 
   const handleChange = (target, key) => {
@@ -62,18 +58,17 @@ const FormAddEdit = ({ text, txtBtn }) => {
     setProdutos({ ...produtos, [key]: value });
   };
   useEffect(() => {
-    if(produto){
-      handleRequestParams()
+    if (produto) {
+      handleRequestParams();
     }
-  }, [])
-  
+  }, []);
+
   return (
     <FormAddEditStyle>
       <TitleMod>{text}</TitleMod>
       <fieldset>
         <ThemeProvider theme={theme}>
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Produto"
             type="text"
@@ -82,7 +77,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.produto}
           />
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Valor"
             type="number"
@@ -91,7 +85,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.valor}
           />
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Insira a URL da imagem"
             type="text"
@@ -102,19 +95,21 @@ const FormAddEdit = ({ text, txtBtn }) => {
           <InputFormMod
             id="filled-basic"
             variant="filled"
-            label="Descrição"
+            label={`Descricao ${produtos.descricao.length}/55`}
             rows={4}
             multiline
             color="primary"
             onChange={({ target }) => handleChange(target, "descricao")}
             value={produtos.descricao}
           />
-          {error?<ErrorStyled>Preencha os campos corretamente</ErrorStyled>:""}
-          <BtnLaranja onClick={!produto ? handlePost : handleUpdate}>
+          <BtnLaranja
+            onClick={handleAction}
+          >
             {txtBtn}
           </BtnLaranja>
         </ThemeProvider>
       </fieldset>
+      <ToastContainer />
     </FormAddEditStyle>
   );
 };

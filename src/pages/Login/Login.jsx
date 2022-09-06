@@ -4,18 +4,17 @@ import { MenuItem } from "@mui/material";
 import {
   BtnLaranja,
   ContainerPageLogin,
-  ContainerForm,
-  ErrorStyled,
+  ContainerForm
 } from "../../styles/globalStyles";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "./styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { input,handleChange,usuarios,setLogin,setError,error} = useContext(OwlsBarContext);
+  const { input,handleChange,usuarios,setLogin} = useContext(OwlsBarContext);
     
   const handleLogin = (e) => {        
     e.preventDefault();
@@ -27,9 +26,7 @@ const Login = () => {
         localStorage.setItem("senha",input.senha)
         setLogin(true)
         navigate('/cardapio')
-        setError(false)
     } else {
-        setError(true)
     }
 };
   return (
@@ -45,8 +42,8 @@ const Login = () => {
             value={input.usuario}
             onChange={({ target }) => handleChange(target, "usuario")}
           >
-            {usuarios.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
+            {usuarios.map((option,index) => (
+              <MenuItem key={index} value={option.value}>
                 {option.label}
               </MenuItem>
             ))}
@@ -59,9 +56,9 @@ const Login = () => {
             value={input.senha}
             onChange={({ target }) => handleChange(target, "senha")}
           />
-        </ThemeProvider>
-        {error?<ErrorStyled>Preencha os dados corretamente!</ErrorStyled>:""}        
+        </ThemeProvider>     
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
+        <p>Para cadastro de funcionário <Link to="/cadastro">clique aqui</Link></p>
       </ContainerForm>
     </ContainerPageLogin>
   );

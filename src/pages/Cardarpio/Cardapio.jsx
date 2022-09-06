@@ -30,7 +30,7 @@ const Cardapio = () => {
     }
   });
 
-  const handleLoadReq = async () => {
+  const handleReqProduto = async () => {
     setInfos(await getProdutos())
   };
 
@@ -42,12 +42,12 @@ const Cardapio = () => {
     setTimeout(() => {
       setLoading(false);
     }, 2500);
-    handleLoadReq();
+    handleReqProduto();
   }, []);
 
   useEffect(() => {
     if (view) {
-      handleLoadReq();
+      handleReqProduto();
       setView(false)
     }
   }, [view]);
