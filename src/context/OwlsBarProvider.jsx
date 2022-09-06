@@ -4,26 +4,11 @@ import React, { createContext, useState } from "react";
 export const OwlsBarContext = createContext()
 
 const OwlsBarProvider =({children}) => {    
-    const getUsuario = localStorage.getItem('usuario')
+    const getUsuario = localStorage.getItem('login')
     const getSenha = localStorage.getItem('senha')    
     const storage = getUsuario&&getSenha
     const [login, setLogin] = useState(false)
-    const [view,setView] = useState(false)
-    
-
-    const usuarios = [
-        {
-        value: "gerente",
-        label: "Gerente",
-        senha: "gerente123",
-        },
-        {
-        value: "garcom",
-        label: "Garçom",
-        senha: "garçom123",
-        },
-    ];
-    
+    const [view,setView] = useState(false)    
     
     const handleLogout = ()=>{
         localStorage.clear()
@@ -33,7 +18,6 @@ const OwlsBarProvider =({children}) => {
 
     const context ={
         storage:storage,
-        usuarios:usuarios,
         login: login,
         view:view,       
         handleLogout:handleLogout,
