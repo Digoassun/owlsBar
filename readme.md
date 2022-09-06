@@ -96,4 +96,14 @@ Para contribuir com nosso projeto, siga estas etapas:
         </sub>
       </a>
     </td>
+     <td align="center">
+      <a href="https://www.linkedin.com/in/rachelle-santolin/">
+        <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQFJac6TxxFLSw/profile-displayphoto-shrink_800_800/0/1661630561814?e=1668038400&v=beta&t=8XVKSqoclhQTnzI-s_JR7hPyiVULHlupFf96S7I-HwY" width="100px;"><br>
+        <sub>
+        <b>Rachelle Santolin</br>
+        <sub>
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20px">
+        </sub>
+      </a>
+    </td>
  </tr>
