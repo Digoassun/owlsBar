@@ -3,8 +3,7 @@ import { TextField } from "@mui/material";
 import {
   BtnLaranja,
   ContainerPageLogin,
-  ContainerForm,
-  ErrorStyled,
+  ContainerForm
 } from "../../styles/globalStyles";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
@@ -12,27 +11,35 @@ import { TitleOrange } from "../Login/styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { useNavigate } from "react-router-dom";
 import { postFuncionario } from "../../services/api";
-import { validaEmpty, validaSenha, validaLogin } from "../../utils/utils";
+import { validaEmpty, validaSenha, validaLogin,validaNome } from "../../utils/utils";
 import { ToastContainer,toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
   const navigate = useNavigate();
-  const { handleChange, error, input, setError } = useContext(OwlsBarContext);
+  const { handleChange, input,setInput } = useContext(OwlsBarContext);
 
   const handlePostFuncionario = (e) => {
     e.preventDefault();
     if (
       !validaEmpty(input)  &&
+      validaNome(input.nome) &&
       validaLogin(input.login)&&
       validaSenha(input.senha)
     ) {
-      // postFuncionario(input);
-      console.log("certo");
-    } else {
-      console.log("errado");
-    }
-    // navigate("/login");
+      toast.success('Cadastro efetuado com sucesso', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+      postFuncionario(input);
+      setInput('')
+      navigate("/login");
+    } 
   };
   return (
     <ContainerPageLogin>
@@ -62,11 +69,6 @@ const Cadastro = () => {
             onChange={({ target }) => handleChange(target, "senha")}
           />
         </ThemeProvider>
-        {error ? (
-          <ErrorStyled>Preencha os dados corretamente!</ErrorStyled>
-        ) : (
-          ""
-        )}
         <BtnLaranja onClick={handlePostFuncionario}>ENTRAR</BtnLaranja>
       </ContainerForm>
       <ToastContainer />

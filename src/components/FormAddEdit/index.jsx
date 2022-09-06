@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
-import { BtnLaranja, ErrorStyled } from "../../styles/globalStyles";
+import { BtnLaranja } from "../../styles/globalStyles";
 import {
   postProduto,
   updateProduto,
@@ -13,7 +13,7 @@ import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 
 const FormAddEdit = ({ text, txtBtn }) => {
-  const { setView, error, setError } = useContext(OwlsBarContext);
+  const { setView } = useContext(OwlsBarContext);
 
   const [produtos, setProdutos] = useState({
     produto: "",
@@ -98,11 +98,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
             onChange={({ target }) => handleChange(target, "descricao")}
             value={produtos.descricao}
           />
-          {error ? (
-            <ErrorStyled>Preencha os campos corretamente</ErrorStyled>
-          ) : (
-            ""
-          )}
           <BtnLaranja
             onClick={!produto ? handlePostProduto : handleUpdateProduto}
           >

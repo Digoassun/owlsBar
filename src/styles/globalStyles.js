@@ -162,10 +162,3 @@ export const InputForm = styled(TextField)
         }
     }
 `
-export const ErrorStyled = styled.p`
-    ${jost}
-    color: red;
-    font-size: 24px;
-    font-weight: 700;
-
-`
