@@ -46,11 +46,7 @@ Para clonar o projeto, execute o comando:
 ```bash
 git clone https://github.com/Digoassun/owlsBar.git
 ```
-Depois mude seu terminal para o diretório que foi criado com o comando:
-```bash
-cd owlsBar
-```
-Execute o comando:
+Depois mude seu terminal para o diretório que foi criado do projeto e execute:
 ```bash
 yarn -OU- npm install
 ```
@@ -63,23 +59,27 @@ Para rodar o projeto.
 
 ## 🛣️ Rotas:
 
-https://user-images.githubusercontent.com/102766893/188697891-219462b5-e176-4490-bd17-46a101422fc6.mp4
-
-
-
 * Rota ```'/'``` para página Home: Está é a primeira página com a qual o usuário se depara. Nela temos uma galeria com fotos do bar e o menu header onde o usuário pode navegar pelas outras páginas do site.
 
 * Rota ```'/cardapio'``` para página de Cárdapio: Na página de cardápio o usuário comum pode ver todos os itens servidos no bar ou pesquisar um específico. Caso uma pessoa logada com permissões maiores de acesso entre nessa página, ela também pode utilizar as funcionalidades de adicionar, deletar ou editar produtos.
 
 * Rota ```'/edit/:produto'``` para página de Edição de Produto: Nesta página temos um formulário para edição das propriedades de cada produto. O usuário pode editar somente uma propriedade ou todas.
 
+https://user-images.githubusercontent.com/102766893/188700693-9d9e0a7c-7d5a-4f2d-91da-55fb82e810a8.mp4
+
 * Rota ```'/adicionar'``` para página de Adição de Produto: Nesta página temos um formulário para adiçao das propriedades de cada produto. O usuário deve preencher todas as propriedades do produto que será adicionado ao cardápio.
 
+https://user-images.githubusercontent.com/102766893/188700336-c0cff58a-41f3-41de-9c77-ca9d9ad0f557.mp4
+
 * Rota ```'/login'``` para página de Login de Usuário: A página de login de usuário contém um formulário para que um funcionário do bar possa se logar no site, e também um link para cadastro de novos funcionários.
+
+https://user-images.githubusercontent.com/102766893/188700197-009d3143-60fe-4e3a-b797-a30693770c9d.mp4
 
 * Rota ```'/cadastro'``` para página de Cadastro de Novos Funcinários: Na página de cadastro de novo funcionário, existe um formulário para preenchimento do nome, cargo e senha do novo usuário em questão.
 
 * Rota ```'/contato'``` para página de Contato: Nessa página é possível conhecer nosso time de desenvolvimento através de links para seus respectivos perfis no linkedin e github.
+
+https://user-images.githubusercontent.com/102766893/188699942-862c89a7-8940-4061-9258-374651e86143.mp4
 
 ## 📫 Como contribuir:
 
@@ -122,6 +122,4 @@ Para contribuir com nosso projeto, siga estas etapas:
    </td>
    </tr>
  </table>
- 
- 
  
