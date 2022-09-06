@@ -4,12 +4,13 @@
 <img src="./src/assets/imgReadme.png"/>
 </p>
 
-<div align='center'>
-<a href='#-tecnologias'>Tecnologias</a> •
-<a href='#-escolhas-no-desenvolvimento'>Escolhas no desenvolvimento</a> • 
-<a href='#%EF%B8%8F-instalando-o-projeto'>Instalando o projeto</a> •
-<a href='#%EF%B8%8F-rotas'>Rotas</a> •
-<a href='#-como-contribuir'>Como contribuir</a>
+ <div align='center'>
+ <a href='#-tecnologias'>Tecnologias</a> •
+ <a href='#-escolhas-no-desenvolvimento'>Escolhas no desenvolvimento</a> • 
+ <a href='#%EF%B8%8F-instalando-o-projeto'>Instalando o projeto</a> •
+ <a href='#%EF%B8%8F-rotas'>Rotas</a> •
+ <a href='#-como-contribuir'>Como contribuir</a> •
+ <a href='#%EF%B8%8F-autores'>Autores</a>
 </div>
 
 <br>
