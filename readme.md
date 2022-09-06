@@ -118,4 +118,12 @@ Para contribuir com nosso projeto, siga estas etapas:
     </td>
  </tr>
  
+ <div align='center'>
+   <div>
+    <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
+    Lisandra Silva
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+ </div>
+ </div>
+ 
  
