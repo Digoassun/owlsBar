@@ -8,7 +8,9 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 
 <a href='#-tecnologias'>Tecnologias</a>
 <a href='#-escolhas-no-desenvolvimento'>Escolhas no desenvolvimento</a>
-<a href='#-instalacao'>Instalação</a>
+<a href='#-instalando-o-projeto'>Instalando o projeto</a>
+<a href='#-rotas'>Rotas</a>
+<a href='#-como-contribuir'>Como contribuir</a>
 
 ## 🌐 Tecnologias:
 
@@ -33,7 +35,7 @@ A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso 
 
 Pensando em fazer melhor uso das classes evitando possíveis conflitos entre os estilos, melhor aproveitamento do código e maior facilidade em sua manutenção, foi usado ```Styled Components```, uma biblioteca que permite que problemas como estes sejam evitados, e que seja feito melhor uso dos estilos utilizados. 
 
-## 🛠️ Instalação:
+## 🛠️ Instalando o projeto:
 
 Para clonar o projeto, execute o comando:
 ```bash
