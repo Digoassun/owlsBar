@@ -35,7 +35,7 @@ A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso 
 
 Pensando em fazer melhor uso das classes evitando possíveis conflitos entre os estilos, melhor aproveitamento do código e maior facilidade em sua manutenção, foi usado ```Styled Components```, uma biblioteca que permite que problemas como estes sejam evitados, e que seja feito melhor uso dos estilos utilizados. 
 
-## 🛠️ Instalando:
+## 🛠️ Instalando o projeto:
 
 Para clonar o projeto, execute o comando:
 ```bash
