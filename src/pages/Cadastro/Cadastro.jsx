@@ -12,7 +12,9 @@ import { TitleOrange } from "../Login/styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { useNavigate } from "react-router-dom";
 import { postFuncionario } from "../../services/api";
-import { validaEmpty, validaSenha,validaLogin } from "../../utils/utils";
+import { validaEmpty, validaSenha, validaLogin } from "../../utils/utils";
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
   const navigate = useNavigate();
@@ -21,9 +23,10 @@ const Cadastro = () => {
   const handlePostFuncionario = (e) => {
     e.preventDefault();
     if (
-      !validaEmpty(input) && 
-      validaSenha(input.senha) &&
-      validaLogin(input.login)) {
+      !validaEmpty(input)  &&
+      validaLogin(input.login)&&
+      validaSenha(input.senha)
+    ) {
       // postFuncionario(input);
       console.log("certo");
     } else {
@@ -66,6 +69,7 @@ const Cadastro = () => {
         )}
         <BtnLaranja onClick={handlePostFuncionario}>ENTRAR</BtnLaranja>
       </ContainerForm>
+      <ToastContainer />
     </ContainerPageLogin>
   );
 };
