@@ -31,7 +31,7 @@ const Login = () => {
     try {
       const response = await getFuncionariosParams(input.login);
       if (response.login === input.login && response.senha === input.senha) {
-        localStorage.setItem("usuario",input.login)
+        localStorage.setItem("login",input.login)
         localStorage.setItem("senha",input.senha)
         setLogin(true)
         navigate('/cardapio')

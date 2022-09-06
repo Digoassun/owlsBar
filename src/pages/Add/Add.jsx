@@ -1,14 +1,14 @@
 import React from 'react'
-import { GridPage } from '../../styles/globalStyles'
-import FigureAdd from '../../components/FigureAdd/FigureAdd'
+import {  PageAddEdit } from '../../styles/globalStyles'
 import FormAddEdit from '../../components/FormAddEdit'
+import Beer from '../../components/Beer/Beer'
 
 const Add = () => {
   return (
-    <GridPage>
+    <PageAddEdit>
       <FormAddEdit text="Adicionar item" txtBtn="Adicionar"/>
-      <FigureAdd/>
-    </GridPage>
+      <Beer/>
+    </PageAddEdit>
   )
 }
 

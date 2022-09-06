@@ -133,10 +133,10 @@ export const CardBox = styled.div `
     
 `
 
-export const GridPage = styled.section `
+export const PageAddEdit = styled.section `
     min-height: 800px;
     width: 100%;
-    background-color:black;
+    background-color:${preto};
     display: flex;
     align-items:center ;
     justify-content: space-around;
