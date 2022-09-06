@@ -92,7 +92,7 @@ Para contribuir com nosso projeto, siga estas etapas:
         <sub>
         <b>Lisandra Silva</br>
         <sub>
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="20px">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
         </sub>
       </a>
     </td>
@@ -102,7 +102,7 @@ Para contribuir com nosso projeto, siga estas etapas:
         <sub>
         <b>Rachelle Santolin</br>
         <sub>
-        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20px">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
         </sub>
       </a>
     </td>
@@ -112,8 +112,10 @@ Para contribuir com nosso projeto, siga estas etapas:
         <sub>
         <b>Rachelle Santolin</br>
         <sub>
-        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20px">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
         </sub>
       </a>
     </td>
  </tr>
+ 
+ 
