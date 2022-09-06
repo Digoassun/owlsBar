@@ -4,12 +4,11 @@ import { NavLink,Link } from "react-router-dom";
 import { BtnStyled, NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none,setMenu}) => {
-  const { login,handleLogout,loginA,setLogin } = useContext(OwlsBarContext);
+  const { login,handleLogout,storage,setLogin } = useContext(OwlsBarContext);
 
   useEffect(() => {
-    loginA?setLogin(true):setLogin(false)
-  }, [])
-  
+    storage?setLogin(true):setLogin(false)
+  }, [])  
   
   return (
     <NavBarStyled column={column} gap={gap} none={none}>

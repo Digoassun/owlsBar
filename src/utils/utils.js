@@ -40,8 +40,6 @@ export const validaNome = (nome) =>{
         return false
     }
 }
-
-
 export const validaLogin = (login) => {
     if (login.length >= 6) {
         return true
@@ -58,7 +56,6 @@ export const validaLogin = (login) => {
         return false
     }
 }
-
 
 export const validaSenha = (senha) => {
     if (senha.match(numeros) && senha.match(alfabetoa) && senha.match(alfabetoA) && senha.match(chEspeciais)) {

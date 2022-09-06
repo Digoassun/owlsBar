@@ -86,7 +86,7 @@ export const ContainerForm = styled.form `
     padding: 20px;
     gap: 20px;
     background-color:${gelo};
-    min-height: 400px;
+    min-height: 200px;
     width: 400px;
     border-radius: 3%;
 `

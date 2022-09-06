@@ -1,34 +1,63 @@
-import React,{ useContext } from "react";
+import React, { useContext, useState } from "react";
 import { TextField } from "@mui/material";
-import { MenuItem } from "@mui/material";
 import {
   BtnLaranja,
   ContainerPageLogin,
-  ContainerForm
+  ContainerForm,
 } from "../../styles/globalStyles";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "./styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { getFuncionariosParams } from "../../services/api";
+import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { input,handleChange,usuarios,setLogin} = useContext(OwlsBarContext);
-    
-  const handleLogin = (e) => {        
+  const { setLogin } = useContext(OwlsBarContext);
+  const [input, setInput] = useState({
+    login: "",
+    senha: "",
+  });
+
+  const handleChange = (target, key) => {
+    const value = target.value;
+    setInput({ ...input, [key]: value });
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (
-    (usuarios[0].value === input.usuario && usuarios[0].senha === input.senha) ||
-    (usuarios[1].value === input.usuario && usuarios[1].senha === input.senha)
-    ) {
+    try {
+      const response = await getFuncionariosParams(input.login);
+      if (response.login === input.login && response.senha === input.senha) {
         localStorage.setItem("usuario",input.usuario)
         localStorage.setItem("senha",input.senha)
         setLogin(true)
         navigate('/cardapio')
-    } else {
+      } else {
+        toast.error("Login e senha não batem", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch {
+      toast.error("Login inválido", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
-};
+  };
   return (
     <ContainerPageLogin>
       <ContainerForm>
@@ -36,30 +65,26 @@ const Login = () => {
         <p>Por favor preencha o dados abaixo para começar!</p>
         <ThemeProvider theme={theme}>
           <TextField
-            id="outlined-select-currency"
-            select
-            label="Selecione um usuário"
-            value={input.usuario}
-            onChange={({ target }) => handleChange(target, "usuario")}
-          >
-            {usuarios.map((option,index) => (
-              <MenuItem key={index} value={option.value}>
-                {option.label}
-              </MenuItem>
-            ))}
-          </TextField>
+            label="Login"
+            type="text"
+            variant="outlined"
+            value={input.login}
+            onChange={({ target }) => handleChange(target, "login")}
+          />
           <TextField
-            id="outlined-basic"
             label="Senha"
             type="password"
             variant="outlined"
             value={input.senha}
             onChange={({ target }) => handleChange(target, "senha")}
           />
-        </ThemeProvider>     
+        </ThemeProvider>
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
-        <p>Para cadastro de funcionário <Link to="/cadastro">clique aqui</Link></p>
+        <p>
+          Para cadastro de funcionário <Link to="/cadastro">clique aqui</Link>
+        </p>
       </ContainerForm>
+      <ToastContainer />
     </ContainerPageLogin>
   );
 };
