@@ -14,6 +14,13 @@
 
 Esse é um site construido com `React`, seguindo as diretrizes do projeto de módulo final do bootcamp da Resilia Educação. O objetivo do site é consumir a <a href="https://github.com/Digoassun/APIRest_Pub/blob/master/readme.md"> **REST API** </a> (clique para verificar documentação) criada no módulo 4. Para desenvolver a aplicação também utilizamos react-router-dom, grid, styled-components e afins.
 
+## 🌐 Tecnologias
+
+<img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+<img alt="Javascript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+<img alt="MaterialUi" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" />
+
+
 ## 🔸 Funcionalidades
 
 * 🍺 Login para administrador
@@ -42,3 +49,8 @@ Depois mude seu terminal para o diretório que foi criado do projeto e execute:
 yarn -OU- npm install
 ```
 Para instalar as dependências do projeto.
+
+```bash
+yarn -OU- npm run dev
+```
+Para rodar o projeto.
