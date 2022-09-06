@@ -82,3 +82,18 @@ Para contribuir com nosso projeto, siga estas etapas:
 - Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
 - Crie a solicitação de pull.
  _Consulte a documentação do GitHub em_ [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+ 
+## 🖊️ Autores:
+
+<tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/lisandradecassia/">
+        <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
+        <sub>
+        <b>Lisandra Silva</br>
+        <sub>
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20px">
+        </sub>
+      </a>
+    </td>
+ </tr>
