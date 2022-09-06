@@ -57,9 +57,9 @@ Para rodar o projeto.
 
 Para contribuir com nosso projeto, siga estas etapas:
 
-> - Faça um fork este repositório.
-> - Crie um branch: `git checkout -b <nome_branch>`.
-> - Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-> - Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-> - Crie a solicitação de pull.
->   _Consulte a documentação do GitHub em_ [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+- Faça um fork este repositório.
+- Crie um branch: `git checkout -b <nome_branch>`.
+- Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+- Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+- Crie a solicitação de pull.
+ _Consulte a documentação do GitHub em_ [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
