@@ -76,3 +76,20 @@ export const validaSenha = (senha) => {
         return false
     }
 }
+
+export const validaDescricao = (descricao) => {
+    if(descricao.length<= 55){
+        return true
+    } else{
+        toast.error('Limite de caracteres atingido', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+        return false
+    }
+}

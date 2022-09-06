@@ -11,6 +11,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
+import { validaEmpty, validaDescricao } from "../../utils/utils";
+import { ToastContainer } from "react-toastify";
+
 
 const FormAddEdit = ({ text, txtBtn }) => {
   const { setView } = useContext(OwlsBarContext);
@@ -30,18 +33,19 @@ const FormAddEdit = ({ text, txtBtn }) => {
     setProdutos(response);
   };
 
-  const handlePostProduto = (e) => {
+    const handleAction = (e) => {
     e.preventDefault();
-    postProduto(produtos);
-    navigate("/cardapio");
-    setView(true);
-  };
-
-  const handleUpdateProduto = (e) => {
-    e.preventDefault();
-    navigate("/cardapio");
-    updateProduto(produto, produtos);
-    setView(true);
+    if(validaDescricao(produtos.descricao) && !validaEmpty(produtos)){
+      if(produto){
+        updateProduto(produto, produtos);
+        
+      } else {
+        postProduto(produtos);
+        
+      }
+      navigate("/cardapio");
+        setView(true);
+    } 
   };
 
   const handleChange = (target, key) => {
@@ -91,7 +95,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
           <InputFormMod
             id="filled-basic"
             variant="filled"
-            label="Descrição"
+            label={`Descricao ${produtos.descricao.length}/55`}
             rows={4}
             multiline
             color="primary"
@@ -99,12 +103,13 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.descricao}
           />
           <BtnLaranja
-            onClick={!produto ? handlePostProduto : handleUpdateProduto}
+            onClick={handleAction}
           >
             {txtBtn}
           </BtnLaranja>
         </ThemeProvider>
       </fieldset>
+      <ToastContainer />
     </FormAddEditStyle>
   );
 };
