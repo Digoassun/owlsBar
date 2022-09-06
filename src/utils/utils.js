@@ -40,6 +40,22 @@ export const validaNome = (nome) =>{
         return false
     }
 }
+export const validaLogin = (login) => {
+    if (login.length >= 6) {
+        return true
+    } else {
+        toast.error('Seu login deve ter pelo menos 6 dígitos', {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+        return false
+    }
+}
 
 export const validaSenha = (senha) => {
     if (senha.match(numeros) && senha.match(alfabetoa) && senha.match(alfabetoA) && senha.match(chEspeciais)) {

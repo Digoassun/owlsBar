@@ -29,7 +29,15 @@ export const updateProduto = async (produto,body) =>{
 }
 
 //Funcionarios
+
+export const getFuncionariosParams = async (login) => {
+  const response = await api.get(`/staff/login/${login}`)
+  return response.data.dados;  
+}
+
+
 export const postFuncionario = async (body) => {
   const response = await api.post("/staff", body);
   return response.data.dados;
 };
+

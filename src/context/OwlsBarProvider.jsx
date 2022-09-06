@@ -6,7 +6,7 @@ export const OwlsBarContext = createContext()
 const OwlsBarProvider =({children}) => {    
     const getUsuario = localStorage.getItem('usuario')
     const getSenha = localStorage.getItem('senha')    
-    const loginA = getUsuario&&getSenha
+    const storage = getUsuario&&getSenha
     const [login, setLogin] = useState(false)
     const [view,setView] = useState(false)
     
@@ -32,7 +32,7 @@ const OwlsBarProvider =({children}) => {
     }
 
     const context ={
-        loginA:loginA,
+        storage:storage,
         usuarios:usuarios,
         login: login,
         view:view,       
