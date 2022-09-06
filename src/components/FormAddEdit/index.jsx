@@ -1,16 +1,19 @@
-import React, { useState,useContext,useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { FormAddEditStyle, InputFormMod, TitleMod } from "./styles";
 import { BtnLaranja, ErrorStyled } from "../../styles/globalStyles";
-import { postProduto, updateProduto,getProdutoParams } from "../../services/api";
+import {
+  postProduto,
+  updateProduto,
+  getProdutoParams,
+} from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 
-
 const FormAddEdit = ({ text, txtBtn }) => {
-  const { setView,error,setError } = useContext(OwlsBarContext);
+  const { setView, error, setError } = useContext(OwlsBarContext);
 
   const [produtos, setProdutos] = useState({
     produto: "",
@@ -19,36 +22,26 @@ const FormAddEdit = ({ text, txtBtn }) => {
     descricao: "",
   });
   const navigate = useNavigate();
-  const params  = useParams();
-  const produto = params.produto
+  const params = useParams();
+  const produto = params.produto;
 
-  const handleRequestParams = async () =>{
-    const response = await getProdutoParams(produto)
-    setProdutos(response)
-  }
+  const handleRequestParams = async () => {
+    const response = await getProdutoParams(produto);
+    setProdutos(response);
+  };
 
   const handlePostProduto = (e) => {
     e.preventDefault();
-    if(!Object.values(produtos).includes("")){
-      postProduto(produtos);
-      navigate("/cardapio");
-      setView(true)
-      setError(false)
-    } else {
-      setError(true)
-    }
+    postProduto(produtos);
+    navigate("/cardapio");
+    setView(true);
   };
 
   const handleUpdateProduto = (e) => {
     e.preventDefault();
-    if(!Object.values(produtos).includes("")){
-      navigate("/cardapio");
-      updateProduto(produto, produtos);
-      setView(true)
-      setError(false)
-    } else {
-      setError(true)
-    }   
+    navigate("/cardapio");
+    updateProduto(produto, produtos);
+    setView(true);
   };
 
   const handleChange = (target, key) => {
@@ -61,11 +54,11 @@ const FormAddEdit = ({ text, txtBtn }) => {
     setProdutos({ ...produtos, [key]: value });
   };
   useEffect(() => {
-    if(produto){
-      handleRequestParams()
+    if (produto) {
+      handleRequestParams();
     }
-  }, [])
-  
+  }, []);
+
   return (
     <FormAddEditStyle>
       <TitleMod>{text}</TitleMod>
@@ -105,8 +98,14 @@ const FormAddEdit = ({ text, txtBtn }) => {
             onChange={({ target }) => handleChange(target, "descricao")}
             value={produtos.descricao}
           />
-          {error?<ErrorStyled>Preencha os campos corretamente</ErrorStyled>:""}
-          <BtnLaranja onClick={!produto ? handlePostProduto : handleUpdateProduto}>
+          {error ? (
+            <ErrorStyled>Preencha os campos corretamente</ErrorStyled>
+          ) : (
+            ""
+          )}
+          <BtnLaranja
+            onClick={!produto ? handlePostProduto : handleUpdateProduto}
+          >
             {txtBtn}
           </BtnLaranja>
         </ThemeProvider>

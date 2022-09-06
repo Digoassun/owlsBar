@@ -14,6 +14,7 @@ const OwlsBarProvider =({children}) => {
         login:"",
         usuario: "",
         senha: "",
+        nome:"",
     });
 
     const usuarios = [

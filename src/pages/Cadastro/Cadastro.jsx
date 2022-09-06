@@ -15,18 +15,12 @@ import { postFuncionario } from "../../services/api";
 
 const Cadastro = () => {
   const navigate = useNavigate();
-  const { handleChange, error, input } = useContext(OwlsBarContext);
+  const { handleChange, error, input, setError } = useContext(OwlsBarContext);
 
   const handlePostFuncionario = (e) => {
     e.preventDefault();
-    if (!Object.values(input).includes("")) {
-      postFuncionario(input);
-      navigate("/login");
-      setView(true);
-      setError(false);
-    } else {
-      setError(true);
-    }
+    postFuncionario(input);
+    // navigate("/login");
   };
   return (
     <ContainerPageLogin>
@@ -45,8 +39,8 @@ const Cadastro = () => {
             label="Login"
             type="text"
             variant="outlined"
-            value={input.login}
-            onChange={({ target }) => handleChange(target, "login")}
+            value={input.usuario}
+            onChange={({ target }) => handleChange(target, "usuario")}
           />
           <TextField
             label="Senha"
