@@ -95,7 +95,7 @@ Para contribuir com nosso projeto, siga estas etapas:
     <a href="https://github.com/Lisandradecassia">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </td>
-  <<td align="center">>
+  <td align="center">
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102765815?v=4" width="100px;"><br>
      Rachelle Santolin <br>
      <a href="https://www.linkedin.com/in/rachelle-santolin/">
@@ -103,7 +103,7 @@ Para contribuir com nosso projeto, siga estas etapas:
      <a href="https://github.com/rachellesdev">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </td>
-   <<td align="center">>
+   <td align="center">
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102702258?v=4" width="100px;"><br>
      Rodrigo Assunção <br>
      <a href="https://www.linkedin.com/in/rodrigo-assun/">
