@@ -7,6 +7,7 @@ import Cadastro from './pages/Cadastro/Cadastro';
 import Cardapio from "./pages/Cardarpio/Cardapio";
 import Contato from './pages/Contato/Contato';
 import Edit from "./pages/Edit/Edit";
+import Funcionarios from './pages/Funcionarios/Funcionarios';
 import Home from "./pages/Home/Home";
 import Login from './pages/Login/Login';
 import { GlobalStyle } from "./styles/globalStyles";
@@ -27,6 +28,7 @@ const Routes = () => {
               <Route path='/login' element={<Login />} />
               <Route path='/contato' element={<Contato />} />
               <Route path='/cadastro' element={<Cadastro/>} />
+              <Route path='/funcionarios' element={<Funcionarios/>} />              
             </Switcher>
             <Footer />
           </BrowserRouter>

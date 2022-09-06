@@ -17,7 +17,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
   const navigate = useNavigate();
-  const { usuarios } = useContext(OwlsBarContext);
   const [input, setInput] = useState({
     login: "",
     senha: "",

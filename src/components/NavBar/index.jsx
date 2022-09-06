@@ -1,10 +1,10 @@
 import React,{useContext,useEffect} from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { NavLink,Link } from "react-router-dom";
-import { BtnStyled, NavBarStyled } from "./style";
+import { BtnNav, NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none,setMenu}) => {
-  const { login,handleLogout,storage,setLogin } = useContext(OwlsBarContext);
+  const { login,handleLogout,storage,setLogin,getNome } = useContext(OwlsBarContext);
 
   useEffect(() => {
     storage?setLogin(true):setLogin(false)
@@ -23,16 +23,18 @@ const NavBar = ({column,gap,none,setMenu}) => {
       </li>
       <li>
         {login? 
+        <div>
           <Link className="btn" to="/" onClick={handleLogout}>
-              <BtnStyled >
-                Sair
-              </BtnStyled>
+              <BtnNav >
+                Logout
+              </BtnNav>
           </Link>
+        </div>
         :
           <Link className="btn" to="/login">
-            <BtnStyled>
+            <BtnNav>
               Login
-            </BtnStyled>
+            </BtnNav>
           </Link>
         }
       </li>
