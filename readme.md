@@ -90,7 +90,7 @@ Para contribuir com nosso projeto, siga estas etapas:
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
      Lisandra de Cássia <br>
      <a href="https://www.linkedin.com/in/lisandradecassia/">
-     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a><br>
     <a href="https://github.com/Lisandradecassia">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </div>
@@ -98,7 +98,7 @@ Para contribuir com nosso projeto, siga estas etapas:
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102765815?v=4" width="100px;"><br>
      Rachelle Santolin <br>
      <a href="https://www.linkedin.com/in/rachelle-santolin/">
-     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a><br>
      <a href="https://github.com/rachellesdev">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </div>
@@ -106,7 +106,7 @@ Para contribuir com nosso projeto, siga estas etapas:
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102702258?v=4" width="100px;"><br>
      Rodrigo Assunção <br>
      <a href="https://www.linkedin.com/in/rodrigo-assun/">
-     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a><br>
     <a href="https://github.com/Digoassun">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </div>
