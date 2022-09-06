@@ -30,7 +30,11 @@ O layout foi inspirado em uma temática de faroeste, a intenção foi buscar uma
 
 ### Material UI
 
-A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso de componentes dinâmicos e acessíveis
+A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso de componentes dinâmicos e acessíveis.
+
+### Styled Components
+
+A biblioteca de componentes ```Styled Components``` foi escolhida pois 
 
 ## 🛠️ Instalação:
 
