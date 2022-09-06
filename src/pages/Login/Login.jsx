@@ -1,4 +1,4 @@
-import React,{ useContext } from "react";
+import React,{ useContext,useState } from "react";
 import { TextField } from "@mui/material";
 import { MenuItem } from "@mui/material";
 import {
@@ -14,15 +14,24 @@ import { useNavigate,Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { input,handleChange,usuarios,setLogin} = useContext(OwlsBarContext);
-    
+  const { usuarios,setLogin} = useContext(OwlsBarContext);
+  const [input, setInput] = useState({
+    login:"",
+    senha: "",
+    nome:"",
+});
+
+  const handleChange = (target, key) => {
+    const value = target.value;
+    setInput({ ...input, [key]: value });
+};
   const handleLogin = (e) => {        
     e.preventDefault();
     if (
-    (usuarios[0].value === input.usuario && usuarios[0].senha === input.senha) ||
-    (usuarios[1].value === input.usuario && usuarios[1].senha === input.senha)
+    (usuarios[0].value === input.login && usuarios[0].senha === input.senha) ||
+    (usuarios[1].value === input.login && usuarios[1].senha === input.senha)
     ) {
-        localStorage.setItem("usuario",input.usuario)
+        localStorage.setItem("login",input.login)
         localStorage.setItem("senha",input.senha)
         setLogin(true)
         navigate('/cardapio')
@@ -36,11 +45,10 @@ const Login = () => {
         <p>Por favor preencha o dados abaixo para começar!</p>
         <ThemeProvider theme={theme}>
           <TextField
-            id="outlined-select-currency"
             select
             label="Selecione um usuário"
-            value={input.usuario}
-            onChange={({ target }) => handleChange(target, "usuario")}
+            value={input.login}
+            onChange={({ target }) => handleChange(target, "login")}
           >
             {usuarios.map((option,index) => (
               <MenuItem key={index} value={option.value}>
@@ -49,7 +57,6 @@ const Login = () => {
             ))}
           </TextField>
           <TextField
-            id="outlined-basic"
             label="Senha"
             type="password"
             variant="outlined"
