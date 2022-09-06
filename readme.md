@@ -8,8 +8,8 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 
 <a href='#-tecnologias'>Tecnologias</a> *
 <a href='#-escolhas-no-desenvolvimento'>Escolhas no desenvolvimento</a> * 
-<a href='#%EF%B8%8F-instalando'>Instalando</a> *
-<a href='#-Rotas'>Rotas</a> *
+<a href='#%EF%B8%8F-instalando'>Instalando o projeto</a> *
+<a href='#%EF%B8%8F-rotas'>Rotas</a> *
 <a href='#-como-contribuir'>Como contribuir</a>
 
 ## 🌐 Tecnologias:
