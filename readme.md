@@ -46,7 +46,11 @@ Para clonar o projeto, execute o comando:
 ```bash
 git clone https://github.com/Digoassun/owlsBar.git
 ```
-Depois mude seu terminal para o diretório que foi criado do projeto e execute:
+Depois mude seu terminal para o diretório que foi criado com o comando:
+```bash
+cd owlsBar
+```
+Execute o comando:
 ```bash
 yarn -OU- npm install
 ```
