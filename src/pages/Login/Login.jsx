@@ -11,7 +11,7 @@ import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "./styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -62,6 +62,7 @@ const Login = () => {
         </ThemeProvider>
         {error?<ErrorStyled>Preencha os dados corretamente!</ErrorStyled>:""}        
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
+        <p>Para cadastro de funcionário <Link to="/cadastro">clique aqui</Link></p>
       </ContainerForm>
     </ContainerPageLogin>
   );

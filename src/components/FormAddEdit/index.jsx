@@ -27,7 +27,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
     setProdutos(response)
   }
 
-  const handlePost = (e) => {
+  const handlePostProduto = (e) => {
     e.preventDefault();
     if(!Object.values(produtos).includes("")){
       postProduto(produtos);
@@ -39,7 +39,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
     }
   };
 
-  const handleUpdate = (e) => {
+  const handleUpdateProduto = (e) => {
     e.preventDefault();
     if(!Object.values(produtos).includes("")){
       navigate("/cardapio");
@@ -49,7 +49,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
     } else {
       setError(true)
     }   
-    
   };
 
   const handleChange = (target, key) => {
@@ -73,7 +72,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
       <fieldset>
         <ThemeProvider theme={theme}>
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Produto"
             type="text"
@@ -82,7 +80,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.produto}
           />
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Valor"
             type="number"
@@ -91,7 +88,6 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.valor}
           />
           <InputFormMod
-            id="filled-basic"
             variant="filled"
             label="Insira a URL da imagem"
             type="text"
@@ -110,7 +106,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
             value={produtos.descricao}
           />
           {error?<ErrorStyled>Preencha os campos corretamente</ErrorStyled>:""}
-          <BtnLaranja onClick={!produto ? handlePost : handleUpdate}>
+          <BtnLaranja onClick={!produto ? handlePostProduto : handleUpdateProduto}>
             {txtBtn}
           </BtnLaranja>
         </ThemeProvider>
