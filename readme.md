@@ -85,8 +85,8 @@ Para contribuir com nosso projeto, siga estas etapas:
  
 ## 🖊️ Autores: 
 
-<table align='center'>
-   <div>
+<table>
+   <div align='center'>
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
      Lisandra de Cássia <br>
      <a href="https://www.linkedin.com/in/lisandradecassia/">
