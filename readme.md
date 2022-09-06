@@ -85,7 +85,7 @@ Para contribuir com nosso projeto, siga estas etapas:
  
 ## 🖊️ Autores: 
 
-<div align='center'>
+<table align='center'>
    <div>
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
      Lisandra de Cássia <br>
@@ -110,7 +110,7 @@ Para contribuir com nosso projeto, siga estas etapas:
     <a href="https://github.com/Digoassun">
      <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
    </div>
- </div>
+ </table>
  
  
  
