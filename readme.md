@@ -85,7 +85,7 @@ Para contribuir com nosso projeto, siga estas etapas:
  
 ## 🖊️ Autores: 
 
-<div align="center" style="display: flex; align-items: flex-start; flex-direction: row;">
+<div align="center" style="display: flex; flex-direction: row;">
    <div>
      <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
      Lisandra de Cássia <br>
