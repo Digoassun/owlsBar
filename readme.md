@@ -15,13 +15,6 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 <img alt="styled-components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
 <img alt="MaterialUi" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" />
 
-## 💡 Funcionalidades:
-
-* 🍺 Login para administrador
-* 🍺 Exibição de  itens contidos no cardápio (API) do bar 
-* 🍺 Deleção de itens contidos no cardápio (API) do bar
-* 🍺 Inclusão de itens no cardápio do (API) bar
-
 ## 🧠 Escolhas no desenvolvimento:
 
 ### Layout
