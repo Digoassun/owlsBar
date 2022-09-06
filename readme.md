@@ -87,14 +87,16 @@ Para contribuir com nosso projeto, siga estas etapas:
 
 <tr>
     <td align="center">
-      <a href="https://www.linkedin.com/in/lisandradecassia/">
+      
         <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/102766893?v=4" width="100px;"><br>
         <sub>
         <b>Lisandra Silva</br>
         <sub>
-        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20px">
+         <a href="https://www.linkedin.com/in/lisandradecassia/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="20px">
+          </a>
         </sub>
-      </a>
+      
     </td>
      <td align="center">
       <a href="https://www.linkedin.com/in/rachelle-santolin/">
