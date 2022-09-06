@@ -59,6 +59,10 @@ Para rodar o projeto.
 
 ## 🛣️ Rotas:
 
+https://user-images.githubusercontent.com/102766893/188697891-219462b5-e176-4490-bd17-46a101422fc6.mp4
+
+
+
 * Rota ```'/'``` para página Home: Está é a primeira página com a qual o usuário se depara. Nela temos uma galeria com fotos do bar e o menu header onde o usuário pode navegar pelas outras páginas do site.
 
 * Rota ```'/cardapio'``` para página de Cárdapio: Na página de cardápio o usuário comum pode ver todos os itens servidos no bar ou pesquisar um específico. Caso uma pessoa logada com permissões maiores de acesso entre nessa página, ela também pode utilizar as funcionalidades de adicionar, deletar ou editar produtos.
