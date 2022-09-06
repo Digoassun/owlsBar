@@ -46,7 +46,7 @@ Depois mude seu terminal para o diretório que foi criado do projeto e execute:
 ```bash
 yarn -OU- npm install
 ```
-Para instalar as dependências do projeto.
+Para instalar as dependências do projeto. Em seguida execute:
 
 ```bash
 yarn -OU- npm run dev
