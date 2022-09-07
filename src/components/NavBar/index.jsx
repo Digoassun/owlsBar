@@ -4,7 +4,7 @@ import { NavLink,Link } from "react-router-dom";
 import { BtnNav, NavBarStyled } from "./style";
 
 const NavBar = ({column,gap,none,setMenu}) => {
-  const { login,handleLogout,storage,setLogin,getNome } = useContext(OwlsBarContext);
+  const { login,handleLogout,storage,setLogin,getLogin } = useContext(OwlsBarContext);
 
   useEffect(() => {
     storage?setLogin(true):setLogin(false)
@@ -21,6 +21,13 @@ const NavBar = ({column,gap,none,setMenu}) => {
       <li>
         <NavLink to="/contato" onClick={()=>setMenu(false)}>Contato</NavLink>
       </li>
+      {getLogin=="gestora"? 
+      <li>
+      <NavLink to="/funcionarios" onClick={()=>setMenu(false)}>Funcionários</NavLink>
+      </li>
+      :
+      ""
+      }
       <li>
         {login? 
         <div>

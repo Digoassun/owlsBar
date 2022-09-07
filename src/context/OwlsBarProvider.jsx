@@ -18,6 +18,7 @@ const OwlsBarProvider = ({ children }) => {
 
   const context = {
     getNome: getNome,
+    getLogin: getLogin,
     storage: storage,
     login: login,
     view: view,
