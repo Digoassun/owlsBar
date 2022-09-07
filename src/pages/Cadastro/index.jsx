@@ -1,11 +1,20 @@
-import React, { useContext, useState } from "react";
-import { MenuItem, TextField } from "@mui/material";
+import React, { useState } from "react";
+import {
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  TextField,
+} from "@mui/material";
 import {
   BtnLaranja,
   ContainerPageLogin,
   ContainerForm,
 } from "../../styles/globalStyles";
 import { ThemeProvider } from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { theme } from "../../styles/variaveis";
 import { TitleOrange } from "../Login/styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
@@ -27,11 +36,16 @@ const Cadastro = () => {
     senha: "",
     nome: "",
   });
+  const [cadastro, setCadastro] = useState(false);
+  const [showPassword, setshowPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setshowPassword(!showPassword);
+  };
   const handleChange = (target, key) => {
     const value = target.value;
     setInput({ ...input, [key]: value });
   };
-  const [cadastro, setCadastro] = useState(false);
 
   const handlePostFuncionario = async (e) => {
     e.preventDefault();
@@ -81,13 +95,33 @@ const Cadastro = () => {
                 value={input.login}
                 onChange={({ target }) => handleChange(target, "login")}
               />
-              <TextField
+              <FormControl variant="outlined">
+                <InputLabel>Senha</InputLabel>
+                <OutlinedInput
+                  type={showPassword ? "text" : "password"}
+                  value={input.senha}
+                  label="Senha"
+                  onChange={({ target }) => handleChange(target, "senha")}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
+              {/* <TextField
                 label="Senha"
                 type="password"
                 variant="outlined"
                 value={input.senha}
                 onChange={({ target }) => handleChange(target, "senha")}
-              />
+              /> */}
             </ThemeProvider>
             <BtnLaranja onClick={handlePostFuncionario}>CADASTRE-SE</BtnLaranja>
           </>
