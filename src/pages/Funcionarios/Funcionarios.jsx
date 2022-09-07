@@ -1,8 +1,13 @@
 import React from 'react'
+import { FuncionariosContainer } from './styles'
 
 const Funcionarios = () => {
   return (
-    <div>Funcionarios</div>
+    <FuncionariosContainer>
+      <div className='containerFuncionarios'>
+
+      </div>
+    </FuncionariosContainer>
   )
 }
 

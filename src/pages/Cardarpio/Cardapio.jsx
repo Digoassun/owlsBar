@@ -9,7 +9,7 @@ import {
   ContainerPage,
   Title,
 } from "../../styles/globalStyles";
-import { getProdutos } from '../../services/api'
+import { getProdutos } from "../../services/api";
 import ModalDelete from "../../components/ModalDelete";
 import LoadAnimation from "../../components/LoadAnimation";
 
@@ -31,7 +31,11 @@ const Cardapio = () => {
   });
 
   const handleReqProduto = async () => {
-    setInfos(await getProdutos())
+    const value = await getProdutos();
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    setInfos(value);
   };
 
   const handleChange = (e) => {
@@ -39,20 +43,15 @@ const Cardapio = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
     handleReqProduto();
   }, []);
 
   useEffect(() => {
     if (view) {
       handleReqProduto();
-      setView(false)
+      setView(false);
     }
   }, [view]);
-
-  
 
   return (
     <>
