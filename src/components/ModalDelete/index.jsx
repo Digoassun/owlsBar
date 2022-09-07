@@ -1,19 +1,30 @@
 import { Dialog } from "@headlessui/react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { BtnSearch } from "../FormSearch/styles";
 import { StyledDialog } from "./styles";
-import { deleteProduto } from "../../services/api";
+import { deleteFuncionario, deleteProduto } from "../../services/api";
 
-const ModalDelete = ({ selectedProduct, isOpen, setIsOpen}) => {
+const ModalDelete = ({
+  infosFuncionario,
+  selectedProduct,
+  isOpen,
+  setIsOpen,
+  selectedFuncionario,
+}) => {
   const { setView } = useContext(OwlsBarContext);
 
   const handleDelete = async () => {
-    await deleteProduto(selectedProduct)
+    if (infosFuncionario) {
+      await deleteFuncionario(selectedFuncionario);
+    } else {
+      await deleteProduto(selectedProduct);
+    }
+    console.log(selectedFuncionario);
     setIsOpen(false);
-    setView(true)
+    setView(true);
   };
-  
+
   return (
     <StyledDialog open={isOpen} onClose={() => setIsOpen(false)}>
       <div className="divModal">

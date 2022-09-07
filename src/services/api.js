@@ -45,3 +45,6 @@ export const postFuncionario = async (body) => {
   return response.data.dados;
 };
 
+export const deleteFuncionario = async (nome) => {
+  await api.delete(`/staff/nome/${nome}`)
+}
