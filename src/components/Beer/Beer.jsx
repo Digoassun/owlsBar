@@ -1,18 +1,17 @@
-import React from 'react'
-import S from './Beer.module.css'
+import React from "react";
+import { StyledBeer } from "./styles";
 
 const Beer = () => {
   return (
-    <div className={S.container}>
-    <div className={S.mug}>
-      <div className={S.beer}></div>
-  
-    </div>
-    <div className={S.bubble}></div>
-    <div className={S.smallB}></div>
-    <div className={S.drip}></div>
-  </div>
-  )
-}
+    <StyledBeer>
+      <div className="mug">
+        <div className="beer"></div>
+      </div>
+      <div className="bubble"></div>
+      <div className="smallB"></div>
+      <div className="drip"></div>
+    </StyledBeer>
+  );
+};
 
-export default Beer
+export default Beer;

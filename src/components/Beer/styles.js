@@ -1,6 +1,9 @@
-.container {
+import styled from "styled-components";
+
+export const StyledBeer = styled.div `
+
     position: relative;
-}
+
 .beer, .bubble, .smallB, .drip {
     position: absolute;
 }
@@ -146,3 +149,4 @@
         height: 25vmin;
    }
 }
+`
