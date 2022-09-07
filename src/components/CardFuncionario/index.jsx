@@ -6,27 +6,19 @@ import { Link } from "react-router-dom";
 
 const CardFuncionario = ({
   login,
-  img,
-  produto,
-  desc,
-  preco,
+  nome,
+  senha,
   setIsOpen,
   setSelectedProduct,
-  endPoint,
 }) => {
   return (
     <CardFuncionarioStyled>
       <div>
-        <p>Nome: Rodrigo{}</p>
-        <p>Login: digoassun{}</p>
-        <p>Senha: 20231000{}</p>
+        <p>Nome: {nome}</p>
+        <p>Login: {login}</p>
+        <p>Senha: {senha}</p>
       </div>
-      <div className="icons">
-        {/* <Link to={endPoint}> */}
-        <BsPencilSquare color="#000" size={25} />
-        {/* </Link> */}
-        <GoTrashcan color={"#000"} size={25} />
-      </div>
+      <GoTrashcan color={"#000"} size={25} />
     </CardFuncionarioStyled>
   );
 };

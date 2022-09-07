@@ -10,9 +10,5 @@ export const CardFuncionarioStyled = styled.article `
     align-items: center;
     justify-content: space-between;
     margin: 0 5px ;
-    .icons{
-        display: flex;
-        flex-direction: row;
-        gap:20px;
-    }
+    
 `
