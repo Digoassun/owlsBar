@@ -32,6 +32,10 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 
 O layout foi inspirado em uma temática de faroeste, a intenção foi buscar uma identidade visual singular e que passasse a imagem de um pub moderno, mas ao mesmo tempo respeitando caracteristicas clássicas.
 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="" title="" src="https://user-images.githubusercontent.com/102765815/188917693-062e3eed-a1a1-4207-89fe-ab78a66fc868.gif">
+</p>
+
 ### Material UI
 
 A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso de componentes dinâmicos e acessíveis.
