@@ -56,12 +56,12 @@ cd owlsBar
 ```
 E execute:
 ```bash
-yarn -OU- npm install
+npm install
 ```
 Para instalar as dependências do projeto. Em seguida execute:
 
 ```bash
-yarn -OU- npm run dev
+npm run dev
 ```
 Para rodar o projeto.
 
@@ -75,7 +75,7 @@ Para rodar o projeto.
 
 * Rota ```'/adicionar'``` para página de Adição de Produto: Nesta página temos um formulário para adiçao das propriedades de cada produto. O usuário deve preencher todas as propriedades do produto que será adicionado ao cardápio.
 
-* Rota ```'/login'``` para página de Login de Usuário: A página de login de usuário contém um formulário para que um funcionário do bar possa se logar no site, e também um link para cadastro de novos funcionários.
+* Rota ```'/login'``` para página de Login de Usuário: A página de login de usuário contém um formulário para que um funcionário do bar possa se logar no site, e também um link para cadastro de novos funcionários. Já existe um perfil cadastrado, com usuário = ```gestora``` e senha = ```Gestora@123```
 
 * Rota ```'/cadastro'``` para página de Cadastro de Novos Funcinários: Na página de cadastro de novo funcionário, existe um formulário para preenchimento do nome, cargo e senha do novo usuário em questão.
 
