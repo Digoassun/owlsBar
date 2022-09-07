@@ -14,7 +14,6 @@ import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { validaEmpty, validaDescricao } from "../../utils/utils";
 import { ToastContainer } from "react-toastify";
 
-
 const FormAddEdit = ({ text, txtBtn }) => {
   const { setView } = useContext(OwlsBarContext);
 
@@ -33,19 +32,17 @@ const FormAddEdit = ({ text, txtBtn }) => {
     setProdutos(response);
   };
 
-    const handleAction = (e) => {
+  const handleAction = (e) => {
     e.preventDefault();
-    if(validaDescricao(produtos.descricao) && !validaEmpty(produtos)){
-      if(produto){
+    if (validaDescricao(produtos.descricao) && !validaEmpty(produtos)) {
+      if (produto) {
         updateProduto(produto, produtos);
-        
       } else {
         postProduto(produtos);
-        
       }
       navigate("/cardapio");
-        setView(true);
-    } 
+      setView(true);
+    }
   };
 
   const handleChange = (target, key) => {
@@ -102,11 +99,7 @@ const FormAddEdit = ({ text, txtBtn }) => {
             onChange={({ target }) => handleChange(target, "descricao")}
             value={produtos.descricao}
           />
-          <BtnLaranja
-            onClick={handleAction}
-          >
-            {txtBtn}
-          </BtnLaranja>
+          <BtnLaranja onClick={handleAction}>{txtBtn}</BtnLaranja>
         </ThemeProvider>
       </fieldset>
       <ToastContainer />

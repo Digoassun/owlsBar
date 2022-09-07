@@ -12,7 +12,7 @@ export const getProdutos = async () => {
 
 export const getProdutoParams = async (produto) => {
   const response = await api.get(`/menu/produto/${produto}`)
-  return response.data.dados;  
+  return response.data.dados;
 }
 
 export const deleteProduto = async (produto) => {
@@ -24,8 +24,8 @@ export const postProduto = async (body) => {
   return response.data.dados;
 };
 
-export const updateProduto = async (produto,body) =>{
-  await api.put(`/menu/produto/${produto}`,body)
+export const updateProduto = async (produto, body) => {
+  await api.put(`/menu/produto/${produto}`, body)
 }
 
 //Funcionarios
@@ -36,7 +36,7 @@ export const getFuncionarios = async () => {
 
 export const getFuncionariosParams = async (login) => {
   const response = await api.get(`/staff/login/${login}`)
-  return response.data.dados;  
+  return response.data.dados;
 }
 
 

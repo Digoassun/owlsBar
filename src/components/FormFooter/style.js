@@ -27,7 +27,7 @@ export const FormFooterStyled = styled.form `
     }
     div{
         display: flex;
-    gap: 20px;
+        gap: 20px;
     }
     
 `

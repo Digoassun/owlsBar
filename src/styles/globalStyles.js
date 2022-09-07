@@ -34,9 +34,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 input[type=number] {
-  -moz-appearance: textfield;
-
-  
+  -moz-appearance: textfield;  
 }
 `
 export const BtnLaranja = styled.button `
@@ -150,8 +148,7 @@ export const PageAddEdit = styled.section `
     }
     }
 `
-export const InputForm = styled(TextField)
-`    
+export const InputForm = styled(TextField)`    
     input,textarea{
         border-radius: 7px 7px 0 0;
         background-color: white;

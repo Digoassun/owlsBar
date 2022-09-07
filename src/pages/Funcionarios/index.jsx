@@ -17,7 +17,6 @@ const Funcionarios = () => {
 
   useEffect(() => {
     handleReqFuncionario();
-    console.log(infosFuncionario)
   }, []);
 
   useEffect(() => {

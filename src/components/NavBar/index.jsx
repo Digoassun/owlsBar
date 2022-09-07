@@ -1,53 +1,57 @@
-import React,{useContext,useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { NavLink,Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { BtnNav, NavBarStyled } from "./style";
 
-const NavBar = ({column,gap,none,setMenu}) => {
-  const { login,handleLogout,storage,setLogin,getLogin } = useContext(OwlsBarContext);
+const NavBar = ({ column, gap, none, setMenu }) => {
+  const { login, handleLogout, storage, setLogin, getLogin } =
+    useContext(OwlsBarContext);
 
   useEffect(() => {
-    storage?setLogin(true):setLogin(false)
-  }, [])  
-  
+    storage ? setLogin(true) : setLogin(false);
+  }, []);
+
   return (
     <NavBarStyled column={column} gap={gap} none={none}>
       <li>
-        <NavLink to="/" onClick={()=>setMenu(false)}>Home</NavLink >
+        <NavLink to="/" onClick={() => setMenu(false)}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/cardapio" onClick={()=>setMenu(false)}>Cardápio</NavLink>
+        <NavLink to="/cardapio" onClick={() => setMenu(false)}>
+          Cardápio
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contato" onClick={()=>setMenu(false)}>Contato</NavLink>
+        <NavLink to="/contato" onClick={() => setMenu(false)}>
+          Contato
+        </NavLink>
       </li>
-      {getLogin=="gestora"? 
+      {getLogin == "gestora" ? (
+        <li>
+          <NavLink to="/funcionarios" onClick={() => setMenu(false)}>
+            Funcionários
+          </NavLink>
+        </li>
+      ) : (
+        ""
+      )}
       <li>
-      <NavLink to="/funcionarios" onClick={()=>setMenu(false)}>Funcionários</NavLink>
-      </li>
-      :
-      ""
-      }
-      <li>
-        {login? 
-        <div>
-          <Link className="btn" to="/" onClick={handleLogout}>
-              <BtnNav >
-                Logout
-              </BtnNav>
+        {login ? (
+          <div>
+            <Link className="btn" to="/" onClick={handleLogout}>
+              <BtnNav>Logout</BtnNav>
+            </Link>
+          </div>
+        ) : (
+          <Link className="btn" to="/login" onClick={() => setMenu(false)}>
+            <BtnNav>Login</BtnNav>
           </Link>
-        </div>
-        :
-          <Link className="btn" to="/login">
-            <BtnNav>
-              Login
-            </BtnNav>
-          </Link>
-        }
+        )}
       </li>
     </NavBarStyled>
   );
-
 };
 
 export default NavBar;

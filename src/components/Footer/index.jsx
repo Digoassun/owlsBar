@@ -1,7 +1,7 @@
 import React from "react";
 import { FooterStyled } from "./styles";
 import logo from "../../assets/logo-header.png";
-import FormFooter from "../FormFooter/FormFooter";
+import FormFooter from "../FormFooter";
 
 const Footer = () => {
   return (
@@ -21,13 +21,13 @@ const Footer = () => {
       <div className="sectionLow">
         <div className="infosLow">
           <p>Termos & Condições</p>
-          <hr/>
+          <hr />
           <p>Política de privaciade</p>
-          <hr/>
+          <hr />
           <p>Acessibilidade</p>
-          <hr/>
+          <hr />
           <p>Jurídico</p>
-          <hr/>
+          <hr />
         </div>
         <div>
           <p>Resilia 2022, Direitos reservados.</p>

@@ -20,7 +20,6 @@ const ModalDelete = ({
     } else {
       await deleteProduto(selectedProduct);
     }
-    console.log(selectedFuncionario);
     setIsOpen(false);
     setView(true);
   };

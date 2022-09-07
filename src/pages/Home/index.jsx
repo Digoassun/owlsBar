@@ -10,9 +10,8 @@ import {
 import homeWelcome from "../../assets/homeWelcome.png";
 import logoHome from "../../assets/logo-home.svg";
 import blur from "../../assets/blur.png";
-import cervejaBanner from '../../assets/cervejaBanner.png'
+import cervejaBanner from "../../assets/cervejaBanner.png";
 import SwiperComponent from "../../components/Swiper";
-
 
 const Home = () => {
   return (
@@ -35,8 +34,8 @@ const Home = () => {
               Também excelentes tipos de whiskys, bem como variedades de gin,
             </p>
             <p>
-              rum, vodka, coqueteis e drinks únicos de dar água na boca. Entre os
-              pratos e acompanhamentos é possível perceber a mistura de
+              rum, vodka, coqueteis e drinks únicos de dar água na boca. Entre
+              os pratos e acompanhamentos é possível perceber a mistura de
             </p>
             <p>
               temperos brasileiros e unicamente preparados pelos chefs do Owl's
@@ -44,12 +43,14 @@ const Home = () => {
             </p>
           </div>
         </div>
-       <SwiperComponent/>
+        <SwiperComponent />
         <img className="blur" src={blur} alt="" />
       </ContainerCarousel>
       <ContainerSabores>
         <div>
-          <TitleSabores>Descubra os sabores das cervejas do mundo todo aqui!</TitleSabores>
+          <TitleSabores>
+            Descubra os sabores das cervejas do mundo todo aqui!
+          </TitleSabores>
         </div>
         <img src={cervejaBanner} alt="cerveja banner" />
       </ContainerSabores>

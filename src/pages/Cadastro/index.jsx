@@ -11,7 +11,12 @@ import { TitleOrange } from "../Login/styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { useNavigate } from "react-router-dom";
 import { postFuncionario } from "../../services/api";
-import { validaEmpty, validaSenha, validaNome,validaLogin } from "../../utils/utils";
+import {
+  validaEmpty,
+  validaSenha,
+  validaNome,
+  validaLogin,
+} from "../../utils/utils";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
