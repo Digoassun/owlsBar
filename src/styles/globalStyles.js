@@ -9,7 +9,6 @@ import {
     gelo,
     jost
 } from "./variaveis";
-import banner from '../assets/banner-cardapio.png'
 import backLogin from '../assets/fundo-login.png'
 import {
     TextField
@@ -59,11 +58,7 @@ export const Title = styled.h1 `
     }
 `
 
-export const ContainerPage = styled.main `
-    display: flex;
-    flex-direction: column;
-    background-color:${preto};
-`
+
 export const ContainerPageLogin = styled.main `   
     display: flex;
     flex-direction: row;
@@ -89,47 +84,6 @@ export const ContainerForm = styled.form `
     border-radius: 3%;
 `
 
-export const ContainerBanner = styled.section `
-    display: flex;
-    align-items: center;
-    padding: 0 150px;
-    height: 300px;
-    background: url(${banner});
-    background-position:center;
-
-    @media(max-width:700px){
-        padding: 0 50px;
-    }
-
-    @media(max-width:500px){
-        padding: 0 10px;
-    }
-`
-
-export const ContainerCard = styled.section `
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin:100px 0;
-    align-items: center;
-
-    p{
-        font-size: 50px;
-        color: white;
-    }
-`
-
-export const CardBox = styled.div `
-    min-height: auto;
-    margin: 100px 200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 30px;
-    
-`
 
 export const PageAddEdit = styled.section `
     min-height: 800px;
