@@ -31,8 +31,7 @@ const Login = () => {
     try {
       const response = await getFuncionariosParams(input.login);
       if (response.login === input.login && response.senha === input.senha) {
-        const [value,setValue] = useLocalStorage('')
-        // localStorage.setItem("login",input.login)
+        localStorage.setItem("login",input.login)
         localStorage.setItem("senha",input.senha)
         localStorage.setItem("nome",response.nome)
         setLogin(true)

@@ -1,5 +1,18 @@
 import styled from "styled-components";
 import funcionarios from '../../assets/funcionarios.png'
+import {
+    Title
+} from "../../styles/globalStyles";
+import {
+    laranja
+} from "../../styles/variaveis";
+
+export const TitleFuncionarios = styled(Title)
+`
+    font-size: 40px;
+    color:${laranja};
+    margin: 10px 0 ;
+`
 
 export const FuncionariosContainer = styled.section `  
     background-image: url(${funcionarios});
@@ -23,7 +36,18 @@ export const FuncionariosContainer = styled.section `
     .containerFuncionarios{
         grid-area: containerFuncionarios;
         background-color: #111113CC;
+        padding:30px 0;
         margin:30px 0;
         border-radius: 20px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        .divCard{
+            display:flex;
+            flex-direction: column;        
+            gap:10px;
+            height: 75vh;
+            overflow-y: auto;
+        }
     }
 `
