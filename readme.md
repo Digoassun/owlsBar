@@ -94,6 +94,12 @@ Para contribuir com nosso projeto, siga estas etapas:
 - Crie a solicitação de pull.
  _Consulte a documentação do GitHub em_ [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
  
+## 📝 To-Do:
+
+-
+-
+-
+ 
 ## 🖊️ Autores: 
 
 <table align="center">
