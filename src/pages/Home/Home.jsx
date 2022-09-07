@@ -10,16 +10,9 @@ import {
 import homeWelcome from "../../assets/homeWelcome.png";
 import logoHome from "../../assets/logo-home.svg";
 import blur from "../../assets/blur.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import carousel1 from "../../assets/carousel1.png";
-import carousel2 from "../../assets/carousel2.png";
-import carousel3 from "../../assets/carousel3.png";
-import carousel4 from "../../assets/carousel4.png";
-import carousel5 from "../../assets/carousel5.png";
 import cervejaBanner from '../../assets/cervejaBanner.png'
+import SwiperComponent from "../../components/Swiper";
+
 
 const Home = () => {
   return (
@@ -51,25 +44,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="carousel">
-          <Swiper navigation={true} modules={[Navigation]} className="swiper">
-            <SwiperSlide className="swiper-slide">
-              <img src={carousel1} alt="imagem carousel" />{" "}
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img src={carousel2} alt="imagem carousel" />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img src={carousel3} alt="imagem carousel" />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img src={carousel4} alt="imagem carousel" />
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <img src={carousel5} alt="imagem carousel" />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+       <SwiperComponent/>
         <img className="blur" src={blur} alt="" />
       </ContainerCarousel>
       <ContainerSabores>
