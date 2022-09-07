@@ -10,5 +10,10 @@ export const CardFuncionarioStyled = styled.article `
     align-items: center;
     justify-content: space-between;
     margin: 0 5px ;
-    
+    @media(max-width:710px){
+    width: 400px ;
+    }
+    @media(max-width:510px){
+    width:250px;
+    }
 `
