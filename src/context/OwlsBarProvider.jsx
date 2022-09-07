@@ -9,6 +9,11 @@ const OwlsBarProvider = ({ children }) => {
   const storage = getLogin && getSenha;
   const [login, setLogin] = useState(false);
   const [view, setView] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleLogout = () => {
     localStorage.clear();
@@ -17,13 +22,16 @@ const OwlsBarProvider = ({ children }) => {
   };
 
   const context = {
+    showPassword: showPassword,
     getNome: getNome,
     getLogin: getLogin,
     storage: storage,
     login: login,
     view: view,
+    handleClickShowPassword: handleClickShowPassword,
     handleLogout: handleLogout,
     setLogin: setLogin,
+    setShowPassword: setShowPassword,
     setView: setView,
   };
   return (

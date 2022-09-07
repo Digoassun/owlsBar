@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   FormControl,
   IconButton,
@@ -30,6 +30,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
+  const { handleClickShowPassword, showPassword } = useContext(OwlsBarContext);
   const navigate = useNavigate();
   const [input, setInput] = useState({
     login: "",
@@ -37,11 +38,7 @@ const Cadastro = () => {
     nome: "",
   });
   const [cadastro, setCadastro] = useState(false);
-  const [showPassword, setshowPassword] = useState(false);
 
-  const handleClickShowPassword = () => {
-    setshowPassword(!showPassword);
-  };
   const handleChange = (target, key) => {
     const value = target.value;
     setInput({ ...input, [key]: value });
