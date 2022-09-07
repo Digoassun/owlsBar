@@ -50,7 +50,7 @@ Para clonar o projeto, execute o comando:
 ```bash
 git clone https://github.com/Digoassun/owlsBar.git
 ```
-Depois mude seu terminal para o diretório que foi criado do projeto com comando:
+Depois mude seu terminal para o diretório que foi criado o projeto com o comando:
 ```bash
 cd owlsBar
 ```
