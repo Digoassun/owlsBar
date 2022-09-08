@@ -14,7 +14,7 @@ import { GlobalStyle } from "./styles/globalStyles";
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <GlobalStyle />
       <Header />
       <Switcher>
