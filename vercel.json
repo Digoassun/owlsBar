@@ -1,12 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/cardapio", "dest": "/cardapio" },
-    { "src": "/edit/:produto", "dest": "/edit/:produto" },
-    { "src": "/adicionar", "dest": "/adicionar" },
-    { "src": "/login", "dest": "/login" },
-    { "src": "/contato", "dest": "/contato" },
-    { "src": "/cadastro", "dest": "/cadastro" },
-    { "src": "/funcionarios", "dest": "/funcionarios" }
-  ]
+    "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }
