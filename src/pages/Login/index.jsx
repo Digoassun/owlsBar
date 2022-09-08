@@ -21,11 +21,11 @@ import { getFuncionariosParams } from "../../services/api";
 import { ToastContainer, toast } from "react-toastify";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import {reqFailed} from '../../utils/utils'
+import { reqFailed } from "../../utils/utils";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { setLogin, handleClickShowPassword, showPassword } =
+  const { setLogin, handleClickShowPassword, showPassword, setShowPassword } =
     useContext(OwlsBarContext);
   const [input, setInput] = useState({
     login: "",
@@ -46,6 +46,7 @@ const Login = () => {
         localStorage.setItem("senha", input.senha);
         localStorage.setItem("nome", response.nome);
         setLogin(true);
+        setShowPassword(false);
         navigate("/cardapio");
       } else {
         toast.error("Login e senha não batem", {
@@ -59,7 +60,7 @@ const Login = () => {
         });
       }
     } catch {
-      reqFailed()
+      reqFailed();
     }
   };
   return (
@@ -98,7 +99,7 @@ const Login = () => {
         </ThemeProvider>
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
         <p>
-          Para cadastro de funcionário <Link to="/cadastro">clique aqui</Link>
+          Para cadastro de funcionário <Link to="/cadastro" onClick={()=>setShowPassword(false)}>clique aqui</Link>
         </p>
       </ContainerForm>
       <ToastContainer />

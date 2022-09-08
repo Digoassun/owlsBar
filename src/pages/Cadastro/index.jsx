@@ -31,7 +31,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
-  const { handleClickShowPassword, showPassword } = useContext(OwlsBarContext);
+  const { handleClickShowPassword, showPassword,setShowPassword } = useContext(OwlsBarContext);
   const navigate = useNavigate();
   const [input, setInput] = useState({
     login: "",
@@ -64,6 +64,7 @@ const Cadastro = () => {
           draggable: true,
           progress: undefined,
         });
+        setShowPassword(false)
         setCadastro(true);
       } catch (error) {
         console.error(error);
