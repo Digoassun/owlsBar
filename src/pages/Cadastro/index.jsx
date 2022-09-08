@@ -31,7 +31,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cadastro = () => {
-  const { handleClickShowPassword, showPassword,setShowPassword } = useContext(OwlsBarContext);
+  const { handleClickShowPassword, showPassword, setShowPassword } =
+    useContext(OwlsBarContext);
   const navigate = useNavigate();
   const [input, setInput] = useState({
     login: "",
@@ -64,7 +65,7 @@ const Cadastro = () => {
           draggable: true,
           progress: undefined,
         });
-        setShowPassword(false)
+        setShowPassword(false);
         setCadastro(true);
       } catch (error) {
         console.error(error);
@@ -123,7 +124,10 @@ const Cadastro = () => {
             <BtnLaranja onClick={handlePostFuncionario}>CADASTRE-SE</BtnLaranja>
           </>
         ) : (
-          <BtnLaranja onClick={handleNavigate}>IR PARA LOGIN</BtnLaranja>
+          <>
+            <p>&#10004;&#65039; Usuário Cadastrado com sucesso</p>
+            <BtnLaranja onClick={handleNavigate}>IR PARA LOGIN</BtnLaranja>
+          </>
         )}
       </ContainerForm>
       <ToastContainer />
