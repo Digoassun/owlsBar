@@ -11,16 +11,19 @@ const Header = () => {
   const { getNome, login } = useContext(OwlsBarContext);
 
   const [menu, setMenu] = useState(false);
-
+  
+  const handleMenu= () =>{
+    setMenu(false)
+  } 
   return (
     <>
-      <MenuHamburguer menu={menu} setMenu={setMenu} />
+      <MenuHamburguer menu={menu} handleMenu={handleMenu} />
       <HeaderStyled>
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
         {login ? <p>Bem-vindo(a), {getNome}</p> : ""}
-        <NavBar setMenu={setMenu} />
+        <NavBar handleMenu={handleMenu} />
         <AiOutlineMenu
           className="hamburguer"
           size={45}
