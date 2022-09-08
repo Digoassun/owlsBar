@@ -16,7 +16,6 @@ export const FormStyled = styled.form `
     }
     @media(max-width:1000px){
         flex-direction: column;
-        /* width: ; */
     }
    
 `

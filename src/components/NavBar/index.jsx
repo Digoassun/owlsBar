@@ -14,9 +14,9 @@ const NavBar = ({ column, gap, none, setMenu }) => {
   return (
     <NavBarStyled column={column} gap={gap} none={none}>
       <li>
-        <NaLink to="/" onClick={() => setMenu(false)}>
+        <NavLink to="/" onClick={() => setMenu(false)}>
           Home
-        </NaLink>
+        </NavLink>
       </li>
       <li>
         <NavLink to="/cardapio" onClick={() => setMenu(false)}>
