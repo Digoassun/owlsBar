@@ -25,7 +25,7 @@ export const postProduto = async (body) => {
 };
 
 export const updateProduto = async (produto, body) => {
-  await api.put(`/men/produto/${produto}`, body)
+  await api.put(`/menu/produto/${produto}`, body)
 }
 
 //Funcionarios
