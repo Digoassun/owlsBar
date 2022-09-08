@@ -43,7 +43,7 @@ const Cardapio = () => {
   const handleChange = (e) => {
     setValue(e.target.value);
   };
-
+  
   useEffect(() => {
     handleReqProduto();
   }, []);

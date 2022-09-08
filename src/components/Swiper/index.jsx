@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
-import carousel1 from "../../assets/carousel1.png";
-import carousel2 from "../../assets/carousel2.png";
-import carousel3 from "../../assets/carousel3.png";
-import carousel4 from "../../assets/carousel4.png";
-import carousel5 from "../../assets/carousel5.png";
+import carousel1 from "../../assets/carousel1.jpg";
+import carousel2 from "../../assets/carousel2.jpg";
+import carousel3 from "../../assets/carousel3.jpg";
+import carousel4 from "../../assets/carousel4.jpg";
+import carousel5 from "../../assets/carousel5.jpg";
 import { CarouselStyled } from "./styles";
 
 const SwiperComponent = () => {

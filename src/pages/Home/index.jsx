@@ -7,10 +7,10 @@ import {
   TitleSabores,
   TitleWelcome,
 } from "./styles";
-import homeWelcome from "../../assets/homeWelcome.png";
+import homeWelcome from "../../assets/homeWelcome.jpg";
 import logoHome from "../../assets/logo-home.svg";
-import blur from "../../assets/blur.png";
-import cervejaBanner from "../../assets/cervejaBanner.png";
+import blur from "../../assets/blur.jpg";
+import cervejaBanner from "../../assets/cervejaBanner.jpg";
 import SwiperComponent from "../../components/Swiper";
 
 const Home = () => {
