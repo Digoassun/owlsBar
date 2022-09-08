@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { BtnSearch } from "../FormSearch/styles";
 import { StyledDialog } from "./styles";
 import { deleteFuncionario, deleteProduto } from "../../services/api";
+import { reqFailed } from "../../utils/utils";
+import { ToastContainer } from "react-toastify";
 
 const ModalDelete = ({
   infosFuncionario,
@@ -16,27 +18,42 @@ const ModalDelete = ({
 
   const handleDelete = async () => {
     if (infosFuncionario) {
-      await deleteFuncionario(selectedFuncionario);
+      try {
+        await deleteFuncionario(selectedFuncionario);
+        setIsOpen(false);
+        setView(true);
+      } catch (error) {
+        console.error(error);
+        reqFailed();
+      }
     } else {
-      await deleteProduto(selectedProduct);
+      try {
+        await deleteProduto(selectedProduct);
+        setIsOpen(false);
+        setView(true);
+      } catch (error) {
+        console.error(error);
+        reqFailed();
+      }
     }
-    setIsOpen(false);
-    setView(true);
   };
 
   return (
-    <StyledDialog open={isOpen} onClose={() => setIsOpen(false)}>
-      <div className="divModal">
-        <Dialog.Panel className="panel">
-          <Dialog.Title>Tem certeza que deseja excluir?</Dialog.Title>
-          <div className="buttons">
-            <BtnSearch onClick={handleDelete}>Delete</BtnSearch>
-            <BtnSearch onClick={() => setIsOpen(false)}>Cancel</BtnSearch>
-          </div>
-        </Dialog.Panel>
-        <div className="blackBox"></div>
-      </div>
-    </StyledDialog>
+    <>
+      <StyledDialog open={isOpen} onClose={() => setIsOpen(false)}>
+        <div className="divModal">
+          <Dialog.Panel className="panel">
+            <Dialog.Title>Tem certeza que deseja excluir?</Dialog.Title>
+            <div className="buttons">
+              <BtnSearch onClick={handleDelete}>Delete</BtnSearch>
+              <BtnSearch onClick={() => setIsOpen(false)}>Cancel</BtnSearch>
+            </div>
+          </Dialog.Panel>
+          <div className="blackBox"></div>
+        </div>
+      </StyledDialog>
+      <ToastContainer />
+    </>
   );
 };
 

@@ -21,6 +21,7 @@ import { getFuncionariosParams } from "../../services/api";
 import { ToastContainer, toast } from "react-toastify";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import {reqFailed} from '../../utils/utils'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -58,15 +59,7 @@ const Login = () => {
         });
       }
     } catch {
-      toast.error("Login inválido", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      reqFailed()
     }
   };
   return (

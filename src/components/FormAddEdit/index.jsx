@@ -11,7 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { validaEmpty, validaDescricao } from "../../utils/utils";
+import { validaEmpty, validaDescricao, reqFailed } from "../../utils/utils";
 import { ToastContainer } from "react-toastify";
 
 const FormAddEdit = ({ text, txtBtn }) => {
@@ -28,20 +28,36 @@ const FormAddEdit = ({ text, txtBtn }) => {
   const produto = params.produto;
 
   const handleRequestParams = async () => {
-    const response = await getProdutoParams(produto);
-    setProdutos(response);
+    try {
+      const response = await getProdutoParams(produto);
+      setProdutos(response);
+    } catch {
+      reqFailed();
+    }
   };
 
-  const handleAction = (e) => {
+  const handleAction = async (e) => {
     e.preventDefault();
     if (validaDescricao(produtos.descricao) && !validaEmpty(produtos)) {
       if (produto) {
-        updateProduto(produto, produtos);
+        try {
+          await updateProduto(produto, produtos);
+          navigate("/cardapio");
+          setView(true);
+        } catch (error) {
+          console.error(error);
+          reqFailed();
+        }
       } else {
-        postProduto(produtos);
+        try {
+          await postProduto(produtos);
+          navigate("/cardapio");
+          setView(true);
+        } catch (error) {
+          console.error(error);
+          reqFailed();
+        }
       }
-      navigate("/cardapio");
-      setView(true);
     }
   };
 
@@ -61,49 +77,51 @@ const FormAddEdit = ({ text, txtBtn }) => {
   }, []);
 
   return (
-    <FormAddEditStyle>
-      <TitleMod>{text}</TitleMod>
-      <fieldset>
-        <ThemeProvider theme={theme}>
-          <InputFormMod
-            variant="filled"
-            label="Produto"
-            type="text"
-            color="primary"
-            onChange={({ target }) => handleChange(target, "produto")}
-            value={produtos.produto}
-          />
-          <InputFormMod
-            variant="filled"
-            label="Valor"
-            type="number"
-            color="primary"
-            onChange={({ target }) => handleChangeNumber(target, "valor")}
-            value={produtos.valor}
-          />
-          <InputFormMod
-            variant="filled"
-            label="Insira a URL da imagem"
-            type="text"
-            color="primary"
-            onChange={({ target }) => handleChange(target, "img")}
-            value={produtos.img}
-          />
-          <InputFormMod
-            id="filled-basic"
-            variant="filled"
-            label={`Descricao ${produtos.descricao.length}/55`}
-            rows={4}
-            multiline
-            color="primary"
-            onChange={({ target }) => handleChange(target, "descricao")}
-            value={produtos.descricao}
-          />
-          <BtnLaranja onClick={handleAction}>{txtBtn}</BtnLaranja>
-        </ThemeProvider>
-      </fieldset>
+    <>
+      <FormAddEditStyle>
+        <TitleMod>{text}</TitleMod>
+        <fieldset>
+          <ThemeProvider theme={theme}>
+            <InputFormMod
+              variant="filled"
+              label="Produto"
+              type="text"
+              color="primary"
+              onChange={({ target }) => handleChange(target, "produto")}
+              value={produtos.produto}
+            />
+            <InputFormMod
+              variant="filled"
+              label="Valor"
+              type="number"
+              color="primary"
+              onChange={({ target }) => handleChangeNumber(target, "valor")}
+              value={produtos.valor}
+            />
+            <InputFormMod
+              variant="filled"
+              label="Insira a URL da imagem"
+              type="text"
+              color="primary"
+              onChange={({ target }) => handleChange(target, "img")}
+              value={produtos.img}
+            />
+            <InputFormMod
+              id="filled-basic"
+              variant="filled"
+              label={`Descricao ${produtos.descricao.length}/55`}
+              rows={4}
+              multiline
+              color="primary"
+              onChange={({ target }) => handleChange(target, "descricao")}
+              value={produtos.descricao}
+            />
+            <BtnLaranja onClick={handleAction}>{txtBtn}</BtnLaranja>
+          </ThemeProvider>
+        </fieldset>
+      </FormAddEditStyle>
       <ToastContainer />
-    </FormAddEditStyle>
+    </>
   );
 };
 

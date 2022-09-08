@@ -4,7 +4,7 @@ import { getFuncionarios } from "../../services/api";
 import { FuncionariosContainer, TitleFuncionarios } from "./styles";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import ModalDelete from "../../components/ModalDelete";
-
+import { ToastContainer } from "react-toastify";
 const Funcionarios = () => {
   const { setView, view } = useContext(OwlsBarContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,12 @@ const Funcionarios = () => {
   const [infosFuncionario, setInfosFuncionario] = useState([]);
 
   const handleReqFuncionario = async () => {
-    setInfosFuncionario(await getFuncionarios());
+    try {
+      setInfosFuncionario(await getFuncionarios());
+    } catch (error) {
+      console.error(error);
+      reqFailed();
+    }
   };
 
   useEffect(() => {
@@ -55,6 +60,7 @@ const Funcionarios = () => {
           </div>
         </div>
       </FuncionariosContainer>
+      <ToastContainer />
     </>
   );
 };

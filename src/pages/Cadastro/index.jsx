@@ -25,6 +25,7 @@ import {
   validaSenha,
   validaNome,
   validaLogin,
+  reqFailed,
 } from "../../utils/utils";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -52,17 +53,22 @@ const Cadastro = () => {
       validaLogin(input.login) &&
       validaSenha(input.senha)
     ) {
-      toast.success("Cadastro efetuado com sucesso", {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      await postFuncionario(input);
-      setCadastro(true);
+      try {
+        await postFuncionario(input);
+        toast.success("Cadastro efetuado com sucesso", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setCadastro(true);
+      } catch (error) {
+        console.error(error);
+        reqFailed();
+      }
     }
   };
 
@@ -112,13 +118,6 @@ const Cadastro = () => {
                   }
                 />
               </FormControl>
-              {/* <TextField
-                label="Senha"
-                type="password"
-                variant="outlined"
-                value={input.senha}
-                onChange={({ target }) => handleChange(target, "senha")}
-              /> */}
             </ThemeProvider>
             <BtnLaranja onClick={handlePostFuncionario}>CADASTRE-SE</BtnLaranja>
           </>

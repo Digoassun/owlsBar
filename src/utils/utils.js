@@ -58,3 +58,7 @@ export const validaDescricao = (descricao) => {
         return false
     }
 }
+
+export const reqFailed = ()=>{
+    return toast.error('Falha de conexão com o sistema',toastDefault)
+}
