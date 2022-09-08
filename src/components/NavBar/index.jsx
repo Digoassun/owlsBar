@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link,useNavigate } from "react-router-dom";
 import { BtnNav, NavBarStyled } from "./style";
 
 const NavBar = ({ column, gap, none, setMenu }) => {
@@ -11,6 +11,8 @@ const NavBar = ({ column, gap, none, setMenu }) => {
     storage ? setLogin(true) : setLogin(false);
   }, []);
 
+  const navigate = useNavigate()
+
   return (
     <NavBarStyled column={column} gap={gap} none={none}>
       <li>
@@ -18,10 +20,14 @@ const NavBar = ({ column, gap, none, setMenu }) => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/cardapio" onClick={() => setMenu(false)}>
+      <li onClick={()=>{
+        navigate('/cardapio')
+        setMenu(false)
+      }}>
+        {/* <NavLink to="/cardapio">
           Cardápio
-        </NavLink>
+        </NavLink> */}
+        Cardapio
       </li>
       <li>
         <NavLink to="/contato" onClick={() => setMenu(false)}>
