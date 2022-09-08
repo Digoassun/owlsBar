@@ -65,9 +65,6 @@ export const Animation = styled.section `
     opacity: 1;
   }
 
-  /* 80%{
-        scale: 1.2;
-      } */
   100% {
     opacity: 1;
     scale: 1;
