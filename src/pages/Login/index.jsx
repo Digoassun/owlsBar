@@ -1,5 +1,12 @@
 import React, { useContext, useState } from "react";
-import { TextField } from "@mui/material";
+import {
+  FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
+  TextField,
+} from "@mui/material";
 import {
   BtnLaranja,
   ContainerPageLogin,
@@ -12,10 +19,14 @@ import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import { useNavigate, Link } from "react-router-dom";
 import { getFuncionariosParams } from "../../services/api";
 import { ToastContainer, toast } from "react-toastify";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import {reqFailed} from '../../utils/utils'
 
 const Login = () => {
   const navigate = useNavigate();
-  const { setLogin } = useContext(OwlsBarContext);
+  const { setLogin, handleClickShowPassword, showPassword } =
+    useContext(OwlsBarContext);
   const [input, setInput] = useState({
     login: "",
     senha: "",
@@ -31,11 +42,11 @@ const Login = () => {
     try {
       const response = await getFuncionariosParams(input.login);
       if (response.login === input.login && response.senha === input.senha) {
-        localStorage.setItem("login",input.login)
-        localStorage.setItem("senha",input.senha)
-        localStorage.setItem("nome",response.nome)
-        setLogin(true)
-        navigate('/cardapio')
+        localStorage.setItem("login", input.login);
+        localStorage.setItem("senha", input.senha);
+        localStorage.setItem("nome", response.nome);
+        setLogin(true);
+        navigate("/cardapio");
       } else {
         toast.error("Login e senha não batem", {
           position: "top-center",
@@ -48,15 +59,7 @@ const Login = () => {
         });
       }
     } catch {
-      toast.error("Login inválido", {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+      reqFailed()
     }
   };
   return (
@@ -72,13 +75,26 @@ const Login = () => {
             value={input.login}
             onChange={({ target }) => handleChange(target, "login")}
           />
-          <TextField
-            label="Senha"
-            type="password"
-            variant="outlined"
-            value={input.senha}
-            onChange={({ target }) => handleChange(target, "senha")}
-          />
+          <FormControl variant="outlined">
+            <InputLabel>Senha</InputLabel>
+            <OutlinedInput
+              type={showPassword ? "text" : "password"}
+              value={input.senha}
+              label="Senha"
+              onChange={({ target }) => handleChange(target, "senha")}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
         </ThemeProvider>
         <BtnLaranja onClick={handleLogin}>ENTRAR</BtnLaranja>
         <p>

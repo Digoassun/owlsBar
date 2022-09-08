@@ -2,16 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import { OwlsBarContext } from "../../context/OwlsBarProvider";
 import Card from "../../components/Card";
 import FormSearch from "../../components/FormSearch";
-import {
-  CardBox,
-  ContainerBanner,
-  ContainerCard,
-  ContainerPage,
-  Title,
-} from "../../styles/globalStyles";
+import { Title } from "../../styles/globalStyles";
 import { getProdutos } from "../../services/api";
 import ModalDelete from "../../components/ModalDelete";
 import LoadAnimation from "../../components/LoadAnimation";
+import { ContainerPage } from "./style";
+import { ToastContainer } from "react-toastify";
+import { reqFailed } from "../../utils/utils";
 
 const Cardapio = () => {
   const { login, setView, view } = useContext(OwlsBarContext);
@@ -31,11 +28,16 @@ const Cardapio = () => {
   });
 
   const handleReqProduto = async () => {
-    const value = await getProdutos();
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    setInfos(value);
+    try {
+      const value = await getProdutos();
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+      setInfos(value);
+    } catch (error) {
+      console.error(error);
+      reqFailed();
+    }
   };
 
   const handleChange = (e) => {
@@ -61,15 +63,15 @@ const Cardapio = () => {
         selectedProduct={selectedProduct}
       />
       <ContainerPage>
-        <ContainerBanner>
+        <section className="banner">
           <Title>Cardápio</Title>
-        </ContainerBanner>
-        <ContainerCard>
+        </section>
+        <section className="containerCard">
           <FormSearch value={value} handleChange={handleChange} login={login} />
           {loading ? (
             <LoadAnimation />
           ) : (
-            <CardBox>
+            <section className="cardBox">
               {infos.length > 0 &&
                 results.map((item, index) => {
                   return (
@@ -86,10 +88,11 @@ const Cardapio = () => {
                     />
                   );
                 })}
-            </CardBox>
+            </section>
           )}
-        </ContainerCard>
+        </section>
       </ContainerPage>
+      <ToastContainer />
     </>
   );
 };

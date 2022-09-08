@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { CardContatoStyled } from "./styles";
 
-const CardContato = ({ img,nome,stack,github, linkedin }) => {
+const CardContato = ({ img, nome, stack, github, linkedin }) => {
   return (
     <CardContatoStyled>
       <figure>
@@ -17,7 +17,7 @@ const CardContato = ({ img,nome,stack,github, linkedin }) => {
           <AiFillLinkedin size={50} cursor="pointer" color="black" />
         </a>
         <a href={github} target="_blank">
-          <AiFillGithub size={50} cursor="pointer" color="black"/>
+          <AiFillGithub size={50} cursor="pointer" color="black" />
         </a>
       </div>
     </CardContatoStyled>

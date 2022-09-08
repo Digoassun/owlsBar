@@ -7,12 +7,12 @@ const CardFuncionario = ({
   nome,
   senha,
   setIsOpen,
-  setSelectedFuncionario
+  setSelectedFuncionario,
 }) => {
-  const handleFuncionario = () =>{
-    setIsOpen(true)
-    setSelectedFuncionario(nome)
-  }
+  const handleFuncionario = () => {
+    setIsOpen(true);
+    setSelectedFuncionario(nome);
+  };
   return (
     <CardFuncionarioStyled>
       <div>
@@ -20,7 +20,12 @@ const CardFuncionario = ({
         <p>Login: {login}</p>
         <p>Senha: {senha}</p>
       </div>
-      <GoTrashcan color={"#000"} size={25} cursor="pointer" onClick={handleFuncionario}/>
+      <GoTrashcan
+        color={"#000"}
+        size={25}
+        cursor="pointer"
+        onClick={handleFuncionario}
+      />
     </CardFuncionarioStyled>
   );
 };

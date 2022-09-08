@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const StyledBeer = styled.div `
-
     position: relative;
+    @media(max-width:700px){
+        display: none;
+    }
 
 .beer, .bubble, .smallB, .drip {
     position: absolute;

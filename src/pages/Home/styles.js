@@ -9,8 +9,7 @@ import {
     satisfy
 } from "../../styles/variaveis";
 
-export const TitleWelcome = styled(Title)
-`
+export const TitleWelcome = styled(Title)`
     font-size: 80px;
     ${satisfy}
     text-align: center;
@@ -19,10 +18,14 @@ export const TitleWelcome = styled(Title)
                 font-size:60px;
                 width:900px;
             }
-        @media(max-width:800px){
+        @media(max-width:900px){
                 font-size:40px;
                 width:700px;
             }
+        @media(max-width:750px){
+            font-size:30px;
+            width:500px;
+        }
         @media(max-width:500px){
             font-size:25px;
             width:450px;
@@ -39,10 +42,11 @@ export const TitleCorousel = styled(Title)
         font-size: 60px;
     }
     @media(max-width:500px){
-        font-size: 40px;
+        font-size: 30px;
     }
 `
-export const TitleSabores = styled(Title)`
+export const TitleSabores = styled(Title)
+`
     color: ${gelo};
     font-size:50px;
     text-align: center;
@@ -69,6 +73,10 @@ export const ContainerWelcome = styled.section `
             @media(max-width:800px){
                 width:250px;
                 height:250px;
+            }
+            @media(max-width:600px){
+                width:200px;
+                height:200px;
             }
             @media(max-width:500px){
                 width:150px;

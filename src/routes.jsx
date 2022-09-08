@@ -2,20 +2,19 @@ import React from 'react'
 import { BrowserRouter, Routes as Switcher, Route } from "react-router-dom";
 import Footer from './components/Footer';
 import Header from "./components/Header";
-import Add from "./pages/Add/Add";
-import Cadastro from './pages/Cadastro/Cadastro';
-import Cardapio from "./pages/Cardarpio/Cardapio";
-import Contato from './pages/Contato/Contato';
-import Edit from "./pages/Edit/Edit";
-import Funcionarios from './pages/Funcionarios/Funcionarios';
-import Home from "./pages/Home/Home";
-import Login from './pages/Login/Login';
+import Add from "./pages/Add";
+import Cadastro from './pages/Cadastro';
+import Cardapio from "./pages/Cardarpio";
+import Contato from './pages/Contato';
+import Edit from "./pages/Edit";
+import Funcionarios from './pages/Funcionarios';
+import Home from "./pages/Home";
+import Login from './pages/Login';
 import { GlobalStyle } from "./styles/globalStyles";
 
 const Routes = () => {
 
-  return (
-    
+  return (    
         <>
           <GlobalStyle />
           <BrowserRouter>

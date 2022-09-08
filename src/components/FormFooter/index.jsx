@@ -1,13 +1,13 @@
 import React from "react";
-import {  ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { BtnFormFooter, FormFooterStyled } from "./style";
 import { InputForm } from "../../styles/globalStyles";
 
 const FormFooter = () => {
   return (
-    <FormFooterStyled>      
-        <label className="label">Receba as notícias mais recentes:</label>      
+    <FormFooterStyled>
+      <label className="label">Receba as notícias mais recentes:</label>
       <div>
         <ThemeProvider theme={theme}>
           <InputForm

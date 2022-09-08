@@ -16,6 +16,7 @@ export const StyledDialog = styled(Dialog)`
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
 
         .blackBox{
             position:absolute ;
@@ -36,8 +37,8 @@ export const StyledDialog = styled(Dialog)`
             z-index: 100;
             
             .buttons{
-               display: flex;
-               gap: 20px;
+                display: flex;
+                gap: 20px;
             }
         }
     }

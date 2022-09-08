@@ -82,8 +82,7 @@ export const FooterStyled = styled.footer `
         p{           
             ${jost}
             font-size: 12px;       
-            color: ${gelo};
-            
+            color: ${gelo};            
         }
         @media(max-width:800px){  
                 align-items:center;

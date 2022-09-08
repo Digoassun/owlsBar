@@ -7,7 +7,8 @@ import {
     laranja
 } from "../../styles/variaveis";
 
-export const TitleMod = styled(Title)`
+export const TitleMod = styled(Title)
+`
     font-size: 60px;
     text-align:center;
     color: ${laranja};
@@ -16,7 +17,8 @@ export const TitleMod = styled(Title)`
     }
 `
 
-export const InputFormMod = styled(InputForm)`
+export const InputFormMod = styled(InputForm)
+`
 @media(max-width:1250px){   
     input,textarea{
         width: 300px;
