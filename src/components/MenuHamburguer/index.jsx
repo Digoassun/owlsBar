@@ -10,8 +10,8 @@ export function MenuHamburguer({ menu, setMenu }) {
 
   return (
     <Container isVisible={menu}>
-      <IoClose className="close" size={45} onClick={() => setMenu(false)} />
-      <NavBar column gap none />
+      <IoClose className="close" size={45} onClick={() =>{ setMenu(false)}} />
+      <NavBar column gap none menu={menu} setMenu={setMenu}/>
     </Container>
   );
 }
