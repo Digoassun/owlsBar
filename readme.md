@@ -29,9 +29,13 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 
 O layout foi inspirado em uma temática de faroeste, a intenção foi buscar uma identidade visual singular e que passasse a imagem de um pub moderno, mas ao mesmo tempo respeitando caracteristicas clássicas.
 
+Também utilizamos o ```FIGMA``` no primeiro momento de desenvolvimento do layout. Segue o link das versões iniciais do site no figma: <a href='https://www.figma.com/proto/TMSCHbUTJK3l3R9YUIhiaz/Owl's-Bar-team-library?node-id=778%3A1412&scaling=scale-down-width&page-id=411%3A2'>Link 1</a>, <a href='https://www.figma.com/proto/TMSCHbUTJK3l3R9YUIhiaz/Owl's-Bar-team-library?node-id=450%3A10&scaling=scale-down-width&page-id=449%3A158'>Link 2</a>, <a href='https://www.figma.com/proto/TMSCHbUTJK3l3R9YUIhiaz/Owl's-Bar-team-library?node-id=465%3A245&scaling=scale-down-width&page-id=465%3A244'>Link 3</a>.
+
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="" title="" src="https://user-images.githubusercontent.com/102765815/188917693-062e3eed-a1a1-4207-89fe-ab78a66fc868.gif">
 </p>
+
+
 
 ### Material UI
 
