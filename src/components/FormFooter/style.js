@@ -29,5 +29,9 @@ export const FormFooterStyled = styled.form `
         display: flex;
         gap: 20px;
     }
+    p{
+        font-size: 16px;
+        color:${gelo};
+    }
     
 `

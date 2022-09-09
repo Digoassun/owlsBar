@@ -20,7 +20,7 @@ const FormSearch = ({ login, value, handleChange }) => {
         />
       </ThemeProvider>
       <Link to="/adicionar">
-        {!login ? "" : <BtnSearch>Adicionar</BtnSearch>}
+        {!login ? "" : <BtnSearch>Adicionar item</BtnSearch>}
       </Link>
     </FormStyled>
   );
