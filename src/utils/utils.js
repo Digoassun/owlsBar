@@ -50,6 +50,15 @@ export const validaSenha = (senha) => {
     }
 }
 
+export const validaSenhaAdmin = (senha) => {
+    if (senha==='admin') {
+        return true
+    } else {
+        toast.error('Senha de administrador incorreta', toastDefault);
+        return false
+    }
+}
+
 export const validaDescricao = (descricao) => {
     if (descricao.length <= 55) {
         return true
