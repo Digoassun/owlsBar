@@ -19,12 +19,9 @@ Esse é um site construido com `React`, seguindo as diretrizes do projeto de mó
 
 ## 🌐 Tecnologias:
 
-<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-<img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img alt="Javascript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
 <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
 <img alt="styled-components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
-<img alt="MaterialUi" src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" />
 
 ## 🧠 Escolhas no desenvolvimento:
 
@@ -38,11 +35,29 @@ O layout foi inspirado em uma temática de faroeste, a intenção foi buscar uma
 
 ### Material UI
 
-A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso de componentes dinâmicos e acessíveis.
+A biblioteca de componentes ```Material UI``` foi escolhida pois facilita o uso de componentes dinâmicos e acessíveis. </br>
+Acesse a documentação: https://mui.com/
 
-### Styled Components
+### Headless UI
 
-Pensando em fazer melhor uso das classes evitando possíveis conflitos entre os estilos, melhor aproveitamento do código e maior facilidade em sua manutenção, foi usado ```Styled Components```, uma biblioteca que permite que problemas como estes sejam evitados, e que seja feito melhor uso dos estilos utilizados. 
+A biblioteca de componentes ```Headless UI```  foi utilizado para fazer o modal do site. </br>
+Acesse a documentação: https://headlessui.com/
+
+### React-Toastify
+
+A biblioteca de notificações ```React-Toastify```  foi utilizado para estilizar notifcações do usuário.</br>
+Acesse a documentação: https://fkhadra.github.io/react-toastify/introduction
+
+### Swiper
+
+A biblioteca de coponentes ```Swiper```  foi utilizado para criação de carrossel.
+Acesse a documentação: https://swiperjs.com/react
+
+### React Icons
+
+A biblioteca de coponentes ```React Icons```  foi utilizado para adicionar icons ao projeto. </br>
+Acesse a documentação: https://react-icons.github.io/react-icons/
+
 
 ## 🛠️ Instalando o projeto:
 
