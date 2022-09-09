@@ -50,7 +50,7 @@ Acesse a documentação: https://fkhadra.github.io/react-toastify/introduction
 
 ### Swiper
 
-A biblioteca de coponentes ```Swiper```  foi utilizado para criação de carrossel.
+A biblioteca de coponentes ```Swiper```  foi utilizado para criação de carrossel. </br>
 Acesse a documentação: https://swiperjs.com/react
 
 ### React Icons
@@ -58,6 +58,9 @@ Acesse a documentação: https://swiperjs.com/react
 A biblioteca de coponentes ```React Icons```  foi utilizado para adicionar icons ao projeto. </br>
 Acesse a documentação: https://react-icons.github.io/react-icons/
 
+
+## 📚 Pré-requisitos  
+- NPM v.8.11.0
 
 ## 🛠️ Instalando o projeto:
 
