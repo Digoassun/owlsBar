@@ -99,7 +99,7 @@ Para rodar o projeto.
 
 * Rota ```'/login'``` para página de Login de Usuário: A página de login de usuário contém um formulário para que um funcionário do bar possa se logar no site, e também um link para cadastro de novos funcionários. Já existe um perfil cadastrado, com ```usuário = gestora``` e ```senha = Gestora@123```
 
-* Rota ```'/cadastro'``` para página de Cadastro de Novos Funcinários: Na página de cadastro de novo funcionário, existe um formulário para preenchimento do nome, cargo e senha do novo usuário em questão.
+* Rota ```'/cadastro'``` para página de Cadastro de Novos Funcinários: Na página de cadastro de novo funcionário, existe um formulário para preenchimento do nome, cargo e senha do novo usuário em questão. Também é necessário colocar uma senha de ADMIN que é igual a ```admin```, para que o usuário sera inserido.
 
 * Rota ```'/funcionarios'``` para página de Funcionários: Na página é possível ver todos os funcionários cadastrados, assim como seus respectivos nomes, usuários e senhas. Também é possível deletar usuários, mas para isso é necessário estar logado com o usuário gestora. Para logar use: ```usuário = gestora``` e ```senha = Gestora@123```.
 
