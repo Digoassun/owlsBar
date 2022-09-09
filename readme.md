@@ -96,9 +96,8 @@ Para contribuir com nosso projeto, siga estas etapas:
  
 ## 📝 To-Do:
 
--
--
--
+- Executar testes utilizando o jest e a react-testing-library.
+- Refatoração de funções usando hooks customizados.
  
 ## 🖊️ Autores: 
 
