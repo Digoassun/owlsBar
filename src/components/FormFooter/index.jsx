@@ -1,12 +1,20 @@
-import React from "react";
+import React,{useState} from "react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "../../styles/variaveis";
 import { BtnFormFooter, FormFooterStyled } from "./style";
 import { InputForm } from "../../styles/globalStyles";
 
 const FormFooter = () => {
+  const [footerEmail, setFooterEmail] = useState(false)
+
+  const handleTroca = (e) =>{
+    setFooterEmail(true)
+  }
+
   return (
     <FormFooterStyled>
+      {!footerEmail?
+      <>
       <label className="label">Receba as notícias mais recentes:</label>
       <div>
         <ThemeProvider theme={theme}>
@@ -19,8 +27,12 @@ const FormFooter = () => {
             size="small"
           />
         </ThemeProvider>
-        <BtnFormFooter>Me inscrever</BtnFormFooter>
-      </div>
+        <BtnFormFooter onClick={handleTroca}>Me inscrever</BtnFormFooter>
+      </div> 
+      </>
+      :
+      <p>Email cadastrado com sucesso!&#10004;&#65039;</p>
+      }
     </FormFooterStyled>
   );
 };
