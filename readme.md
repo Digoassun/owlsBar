@@ -97,7 +97,7 @@ Para rodar o projeto.
 
 * Rota ```'/cadastro'``` para página de Cadastro de Novos Funcinários: Na página de cadastro de novo funcionário, existe um formulário para preenchimento do nome, cargo e senha do novo usuário em questão.
 
-* Rota ```'/funcionarios'``` para página de Funcionários: Na página é possível ver todos os funcionários cadastrados, assim como seus respectivos nomes, usuários e senhas. Também é possível deletar usuários.
+* Rota ```'/funcionarios'``` para página de Funcionários: Na página é possível ver todos os funcionários cadastrados, assim como seus respectivos nomes, usuários e senhas. Também é possível deletar usuários, mas para isso é necessário estar logado com o usuário gestora. Para logar use: ```usuário = gestora``` e ```senha = Gestora@123```.
 
 * Rota ```'/contato'``` para página de Contato: Nessa página é possível conhecer nosso time de desenvolvimento através de links para seus respectivos perfis no linkedin e github.
 
