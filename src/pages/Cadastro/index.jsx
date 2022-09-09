@@ -26,6 +26,7 @@ import {
   validaNome,
   validaLogin,
   reqFailed,
+  validaSenhaAdmin,
 } from "../../utils/utils";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -39,11 +40,16 @@ const Cadastro = () => {
     senha: "",
     nome: "",
   });
+  const [senhaAdmin, setSenhaAdmin] = useState("");
+
   const [cadastro, setCadastro] = useState(false);
 
   const handleChange = (target, key) => {
     const value = target.value;
     setInput({ ...input, [key]: value });
+  };
+  const handleChangeSenhaAdmin = (e) => {
+    setSenhaAdmin(e.target.value);
   };
 
   const handlePostFuncionario = async (e) => {
@@ -52,7 +58,8 @@ const Cadastro = () => {
       !validaEmpty(input) &&
       validaNome(input.nome) &&
       validaLogin(input.login) &&
-      validaSenha(input.senha)
+      validaSenha(input.senha) &&
+      validaSenhaAdmin(senhaAdmin)
     ) {
       try {
         await postFuncionario(input);
@@ -107,6 +114,26 @@ const Cadastro = () => {
                   value={input.senha}
                   label="Senha"
                   onChange={({ target }) => handleChange(target, "senha")}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                />
+              </FormControl>
+              <FormControl variant="outlined">
+                <InputLabel>ADM</InputLabel>
+                <OutlinedInput
+                  type={showPassword ? "text" : "password"}
+                  value={senhaAdmin}
+                  label="ADM"
+                  onChange={handleChangeSenhaAdmin}
                   endAdornment={
                     <InputAdornment position="end">
                       <IconButton
