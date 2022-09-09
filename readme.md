@@ -61,7 +61,7 @@ npm install
 Para instalar as dependências do projeto. Em seguida execute:
 
 ```bash
-npm run dev
+npm start
 ```
 Para rodar o projeto.
 
