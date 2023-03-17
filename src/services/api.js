@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://api-pub-project.herokuapp.com",
+  baseURL: "https://apirestpub-production.up.railway.app",
 });
 
 //Produtos
